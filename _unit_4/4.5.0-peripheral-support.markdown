@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: lesson
 title:  "Peripheral Support"
 categories: accessibility 
 chapter: "4.5.0"

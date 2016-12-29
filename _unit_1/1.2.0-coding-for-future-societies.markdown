@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: lesson
 title:  "Coding for Future Societies"
 date:   2016-12-28 10:37:34 -0800
 categories: 1.0.3 accessibility social

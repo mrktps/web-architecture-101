@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: lesson
 title:  "Usability Testing"
 date:   2016-12-28 10:37:34 -0800
 categories: usability testing

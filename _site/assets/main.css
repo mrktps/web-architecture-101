@@ -451,5 +451,50 @@ pre {
   .highlight .il {
     color: #099; }
 
+html {
+  --text-color: #111;
+  --brand-color: #2a7ae2;
+  --brand-color-dark: #1756a9;
+  --grey-color: #828282;
+  --grey-color-dark: #424242;
+  --background-color: #fdfdfd;
+  --site-title-color: #424242; }
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color); }
+
+.site-nav .page-link {
+  color: var(--text-color); }
+
+.footer-col-wrapper {
+  color: var(--grey-color); }
+
+a {
+  color: var(--brand-color); }
+  a:visited {
+    color: var(--brand-color-dark); }
+  a:hover {
+    color: var(--text-color); }
+
+.site-title, .site-title:visited {
+  color: var(--site-title-color); }
+
 code, pre, .mono {
   font-family: 'Fira Mono', monospace; }
+
+.post-list li:target {
+  outline: 2px solid #2a7ae2;
+  outline: 2px solid var(--brand-color);
+  outline-offset: .5em; }
+  .post-list li:target h2 a, .post-list li:target h3 a {
+    font-weight: bold; }
+
+summary h2, summary h3 {
+  display: inline-block; }
+
+.icon svg path, svg.icon path {
+  fill: var(--grey-color); }
+
+.post-meta {
+  color: var(--grey-color); }

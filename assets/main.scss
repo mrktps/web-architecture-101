@@ -26,6 +26,9 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+$black: rgb(8,8,8);
+$white: white;
+
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -38,6 +41,81 @@ $on-laptop:        800px;
 // Import partials from the `minima` theme.
 @import "minima";
 
+html {
+  --text-color: $text-color;
+  --brand-color: $brand-color;
+  --brand-color-dark: darken($brand-color, 15%);
+  --grey-color: $grey-color;
+  --grey-color-dark: $grey-color-dark;
+  --background-color: $background-color;
+  --site-title-color: $grey-color-dark;
+}
+
+body {
+  color:var(--text-color);
+  background-color: var(--background-color);
+}
+
+.site-nav {
+  .page-link {
+    color: var(--text-color);
+  }
+}
+
+.footer-col-wrapper {
+  color: var(--grey-color);
+}
+
+a {
+  color: var(--brand-color);
+
+  &:visited {
+    color: var(--brand-color-dark);
+  }
+
+  &:hover {
+    color: var(--text-color);
+  }
+}
+
+.site-title {
+  &,
+  &:visited {
+    color: var(--site-title-color);
+  }
+}
+
 code, pre, .mono {
   font-family: 'Fira Mono', monospace;
+}
+
+.post-list {
+  li {
+    &:target {
+      outline:2px solid $brand-color;
+      outline:2px solid var(--brand-color);
+      outline-offset:.5em;
+      h2,h3 {
+        a {
+          font-weight:bold;
+        }
+      }
+    }
+  }
+}
+
+summary {
+  h2,h3 {
+    display:inline-block;
+  }
+}
+
+.icon svg, svg.icon {
+  path {
+    fill: var(--grey-color);
+  }
+}
+
+.post-meta {
+  color: var(--grey-color);
 }

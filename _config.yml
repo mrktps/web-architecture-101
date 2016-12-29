@@ -16,7 +16,7 @@
 title: Intro to Web Architecture
 email: mrktps@devries.jp
 description: > # this means to ignore newlines until "baseurl:"
-  A series of lessons introducing you to fundamental principles and design patterns of Web Architecture. Brought to you by MarkupTips and Thinkful.
+  A series of lessons introducing you to fundamental principles and design patterns of Web Architecture. Brought to you by Markup Tips and Thinkful.
 baseurl: "/intro-web-architecture" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mrktps
@@ -28,6 +28,12 @@ defaults:
     chapter: "0"
     
 collections:
+  unit_0:
+    output: true
+    permalink: /lessons/:path/
+    title: "Preface"
+  
+  
   unit_1:
     output: true
     permalink: /lessons/:path/

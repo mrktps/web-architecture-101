@@ -1,10 +1,12 @@
 ---
-layout: post
+layout: lesson
 title:  "The Art of a Perfect Page Speed Score 💯⚡️"
 date:   2016-12-28 10:37:34 -0800
 categories: performance optimization 
 chapter: "2.3.0"
 ---
 
-The key to achieving a perfect page speed score in the end is to start with one in the beginning.
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The key to achieving a perfect page speed score in the end is to start with one in the beginning.<br><br>HTML first.<br>💯⚡️</p>&mdash; JP de Vries (@jpdevries) <a href="https://twitter.com/jpdevries/status/814283485074493440">December 29, 2016</a></blockquote> 
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Earlier this year we achieved a 100/100 PageSpeed score but more optimization to come. <br><br>Offline support, service workers, VanillaJS, HTTP/2</p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/783197033012273153">October 4, 2016</a></blockquote> 
 

@@ -1,8 +1,14 @@
 ---
-layout: post
+layout: lesson
 title:  "Leveraging the Browser Cache"
 date:   2016-12-28 10:37:34 -0800
 categories: production
 chapter: "2.6.0"
 ---
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If your app.js is getting heavy ask yourself “is bundling leveraging the browser cache?”<br><br>Pull large frameworks &amp; libraries out.</p>&mdash; JP de Vries (@jpdevries) <a href="https://twitter.com/jpdevries/status/783567330571849728">October 5, 2016</a></blockquote> 
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Find repetitive style blocks in your Sass and use %silent-classes to combine them. <br><br>Will reduce CSS footprint.</p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/783239425971159040">October 4, 2016</a></blockquote> 
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">This accessible and a/sync ToDo List is progressively enhanced w/ React/Redux and only loads script if they&#39;ll work.<a href="https://t.co/rabTqw8d7N">https://t.co/rabTqw8d7N</a> <a href="https://t.co/gdbHhz624W">pic.twitter.com/gdbHhz624W</a></p>&mdash; JP de Vries (@jpdevries) <a href="https://twitter.com/jpdevries/status/781177223411892225">September 28, 2016</a></blockquote> 
 

@@ -1,8 +1,17 @@
 ---
-layout: post
+layout: lesson
 title:  "Acknowledging Ableism in Our Designs"
 date:   2016-12-28 10:37:34 -0800
 categories: accessibility social
 chapter: "1.4.0"
 ---
 
+How your code interacts with a world wide society is ultimately up to you. Your political and social beliefs will consciously and subconsciously influence your designs. What is important is that they are not the only things influencing them. It is the research, budgeting and user testing that enhance our personal view into a design fit for society at large. Take Jonny for example. Jonny does not mind if disabled people cannot access websites he designs. Jonny is aware of his ableism. Jonny is also aware of his business goals. With experience, Jonny has discovered that if more people can access his client's store the greater profits they will have. The greater profits his clients experience the more likely they are to refer and return to Jonny for future business. 
+
+Jonny didn't care about the social or moral justifications for inclusive design. But his attention to his bottom line has made him an inclusive designer no less. There are many paths that lead to the benefits of inclusive design. Not all of them are based on social justice or morality. **People are jerks**. While we may never arrive at a day when everyone cares about everyone this should not hinder the adoption of inclusive design. Because even the jerk is made a fool by not profiting from the search engine, economic, and performance benefits of inclusive design patterns.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Try to refrain from allowing ableism into your designs.<br><br>Spend the same amount of time you spend on visual styles on accessibility <a href="https://twitter.com/hashtag/a11y?src=hash">#a11y</a><br>⏰♿️</p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/799879792833298432">November 19, 2016</a></blockquote> 
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="tl" dir="ltr">Data is money.<br>📡💸</p>&mdash; JP de Vries (@jpdevries) <a href="https://twitter.com/jpdevries/status/809049475973054464">December 14, 2016</a></blockquote> 
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How many “Full Stack Developers” actively dismiss or ignore accessibility?<br><br>It is foolish to think a11y isn’t part of “the stack”.</p>&mdash; JP de Vries (@jpdevries) <a href="https://twitter.com/jpdevries/status/805073606015328256">December 3, 2016</a></blockquote> 

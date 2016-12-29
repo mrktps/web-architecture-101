@@ -1,0 +1,9 @@
+---
+layout: lesson
+title:  "There is no Speed in Web Performance"
+date:   2016-12-28 10:37:34 -0800
+categories: performance optimization
+chapter: "2.7.0"
+---
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">“Web Performance has far more to do with accessibility than it does speed.” <a href="https://twitter.com/jpdevries">@jpdevries</a> <a href="https://t.co/P3Y1zOW9F9">https://t.co/P3Y1zOW9F9</a></p>&mdash; aldo pinga (@aldopinga) <a href="https://twitter.com/aldopinga/status/799265165149634560">November 17, 2016</a></blockquote> 

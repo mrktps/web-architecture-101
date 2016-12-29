@@ -1,8 +1,13 @@
 ---
-layout: post
+layout: lesson
 title:  "Responsibly Architecting the World Wide Web"
 date:   2016-12-28 11:37:34 -0800
 categories: 1.0 accessibility social
 chapter: "1.1.0"
 ---
 
+<blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Think of a web site like a public building. Even if you open it to the public with no admission each person spends time and money to arrive <a href="https://t.co/gn6NS0znRs">pic.twitter.com/gn6NS0znRs</a></p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/794309888310726657">November 3, 2016</a></blockquote> 
+
+<blockquote class="twitter-tweet" data-conversation="none" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Authoring the world-wide web is a great power. With it comes a responsibility to at least consider world–wide accessibility needs <a href="https://t.co/Mv2urje1P3">pic.twitter.com/Mv2urje1P3</a></p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/794309405189820418">November 3, 2016</a></blockquote> 
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Slides for Responsibly Architecting for the World–Wide Web discussion now on available <a href="https://t.co/rIMCWR3h8D">https://t.co/rIMCWR3h8D</a> <a href="https://t.co/fh0fJsAI6a">pic.twitter.com/fh0fJsAI6a</a></p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/794308789218529284">November 3, 2016</a></blockquote> 

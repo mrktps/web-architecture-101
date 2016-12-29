@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: lesson
 title:  "Welcome to Jekyll!"
 date:   2016-12-28 10:37:34 -0800
 categories: jekyll update
