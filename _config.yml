@@ -1,0 +1,63 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Intro to Web Architecture
+email: mrktps@devries.jp
+description: > # this means to ignore newlines until "baseurl:"
+  A series of lessons introducing you to fundamental principles and design patterns of Web Architecture. Brought to you by MarkupTips and Thinkful.
+baseurl: "/intro-web-architecture" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: mrktps
+github_username:  mrktps
+permalink: none
+
+defaults:
+    author: "JP de Vries"
+    chapter: "0"
+    
+collections:
+  unit_1:
+    output: true
+    permalink: /lessons/:path/
+    title: "Unit 1: Responsibilities of a Web Architect"
+    
+  unit_2:
+    output: true
+    permalink: /lessons/:path/
+    title: "Unit 2: Tricks of the Trade"
+    
+  unit_3:
+    output: true
+    permalink: /lessons/:path/
+    title: "Unit 3: Design Patterns"
+    
+  unit_4:
+    output: true
+    permalink: /lessons/:path/
+    title: "Unit 4: Accessibility Rocks"
+    
+  unit_5:
+    output: true
+    permalink: /lessons/:path/
+    title: "Unit 5: Beyond the Web Page"
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "The Art of a Perfect Page Speed Score 💯⚡️"
+date:   2016-12-28 10:37:34 -0800
+categories: performance optimization 
+chapter: "2.3.0"
+---
+
+The key to achieving a perfect page speed score in the end is to start with one in the beginning.
+

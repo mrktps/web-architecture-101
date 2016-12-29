@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Acknowledging Ableism in Our Designs"
+date:   2016-12-28 10:37:34 -0800
+categories: accessibility social
+chapter: "1.4.0"
+---
+
