@@ -23,9 +23,18 @@ twitter_username: mrktps
 github_username:  mrktps
 permalink: none
 
+sass:
+    sass_dir: assets/
+
 defaults:
-    author: "JP de Vries"
-    chapter: "0"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      author: jpdevries
+      chapter: "0"
+      layout: "lesson"
+      githubedit: https://github.com/mrktps/web-architecture-101/
     
 collections:
   unit_0:

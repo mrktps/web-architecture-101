@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>♿️ Powering Accessible Styles with CSS Variables</title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Together in this lesson we will cover the basics of CSS Variables along with a clever trick to use them to make your stylesheets more accessible.">
+
+  <link rel="stylesheet" href="/intro-web-architecture/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/intro-web-architecture/lessons/4.2.0-powering-accessible-styles-with-CSS-variables/">
+  <link rel="alternate" type="application/rss+xml" title="Intro to Web Architecture" href="/intro-web-architecture/feed.xml">
+  
+  
+  
+  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  
+  <style type="text/css" media="screen">
+    body.white-on-black {
+      --background-color: rgb(14,14,14);
+      --text-color: white;
+      --brand-color: rgb(210, 210, 210);
+      --brand-color-dark: rgb(180, 180, 180);
+      --site-title-color: rgb(220, 220, 220);
+      --manilla: rgb(24,24,24);
+    }
+  </style>
+<script src="http://127.0.0.1:35729/livereload.js"></script></head>
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/intro-web-architecture/">Intro to Web Architecture</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/intro-web-architecture/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/intro-web-architecture/humans">Humans</a>
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/intro-web-architecture/source.html">Source Code</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">♿️ Powering Accessible Styles with CSS Variables</h1>
+    <p class="post-meta"><span><span class="">Lesson </span>4.2.0</span></p>
+    
+    
+    
+      <p class="written-by">
+    <!-- Personal Info. -->
+    Written by <a href="http://devries.jp" target="_blank">JP de Vries</a>
+</p>
+    
+    
+    
+      <aside>
+        <p><a href="https://github.com/mrktps/web-architecture-101/edit/master/_unit_4/4.2.0-powering-accessible-styles-with-CSS-variables.markdown">Improve this Page</a></p>
+      </aside>
+    
+    
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><em>Together in this lesson we will cover the basics of CSS Variables along with a clever trick to use them to make your stylesheets more accessible.</em></p>
+
+<p>When I first heard of CSS Variables I thought to myself “What’s the point? I can already do that in Sass”. Turns out I was gleefully mistaken right about the time <a href="https://philipwalton.com/articles/why-im-excited-about-native-css-variables/">Phillip Walton wrote about why he is excited about Native CSS Variables</a>.</p>
+
+<p>The <span title="To Long Didn't Read">TL;DR</span> is that:</p>
+
+<ul>
+  <li><strong><i>CSS Variables can do things that preprocessors variables cannot do</i></strong></li>
+</ul>
+
+<p>Phillip demonstrates several practical use cases for CSS Variables such as <a href="http://codepen.io/philipwalton/pen/KdxmWL#code-area">applying different style to different components without having to override selectors</a>. Using a similar concept, we can architect the components of our page to <strong>respond to any given user’s accessibility preferences</strong>.</p>
+
+<figure>
+  <a target="KdxmWL" href="http://codepen.io/philipwalton/pen/KdxmWL#code-area">
+    <img src="/intro-web-architecture/assets/images/cssvariables/custom-properties-contextual-styling-1400w.png" alt="One CSS Component with different styles based on the context of their location within the page" />
+  </a>
+  <figcaption>Phillip's demo illustrates contextual styling of both links and buttons in the header of a site as well as the content&nbsp;area</figcaption>
+</figure>
+
+<h2 id="keeping-it-dry-with-css-variable">Keeping it DRY with CSS Variable</h2>
+<p>Before CSS Variables we’d have to get a bit hacky to override styles based on accessibility preferences. Even using another stylesheet to override styles and create an altered theme can be a painstaking process. We’d have to override each CSS selector with equal or great specificity. This not only required efforts of a CSS Developer but left our code wet and difficult to maintain. Having to make changes in multiple locations costs us technical debt that we’d rather not incur.</p>
+
+<p>CSS Variables save the day by allowing us to use dynamic variables as property values. These dynamic variables abide by the cascade just like normal CSS.</p>
+
+<h2 id="accessibile-theme-switcher">Accessibile Theme Switcher</h2>
+
+<p>In this CodePen we add support for a simple high contrast theme without actually overriding any CSS properties:</p>
+
+<p data-height="420" data-theme-id="0" data-slug-hash="jVgjpb" data-default-tab="css,result" data-user="jpdevries" data-embed-version="2" data-pen-title="High Contrast Theme with CSS Variables" class="codepen">See the Pen <a href="http://codepen.io/jpdevries/pen/jVgjpb/">High Contrast Theme with CSS Variables</a> by JP DeVries (<a href="http://codepen.io/jpdevries">@jpdevries</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p><br />We use a <code class="highlighter-rouge">body[data-theme="highcontrast"]</code> scope to override the default values of our theme variables. As <code class="highlighter-rouge">body[data-theme="highcontrast"]</code> is painted the cascade says “Well, I was going to use these default property values but since <code class="highlighter-rouge">body</code> has a <code class="highlighter-rouge">.highcontrast</code> class we’ll use these other more specific ones instead”. Notice that all this happens without us having to explicitly set or override properties on <code class="highlighter-rouge">body[data-theme="highcontrast"]</code>.</p>
+
+<p>Let’s break it down. First we set some CSS properties on the <code class="highlighter-rouge">body</code> to CSS Variables for background color, text color, and font family. Our variables have defaults so they have value even when not set.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--background-color</span><span class="p">,</span> <span class="no">white</span><span class="p">);</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--text-color</span><span class="p">,</span> <span class="n">currentColor</span><span class="p">);</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--font-family</span><span class="p">,</span> <span class="nb">inherit</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Next we set our CSS Variables to their high contrast values.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">body</span><span class="o">[</span><span class="nt">data-theme</span><span class="o">=</span><span class="s1">"highcontrast"</span><span class="o">]</span> <span class="p">{</span>
+  <span class="py">--background-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="py">--text-color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="py">--font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>In traditional CSS this would be accomplished like so:</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">body</span><span class="o">[</span><span class="nt">data-theme</span><span class="o">=</span><span class="s1">"highcontrast"</span><span class="o">]</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>So you might be thinking, what’s the big deal? I can accomplish the same thing without CSS Variables. The advantages of cascading variables becomes more apparent as your style guide grows. In the above example we have three CSS Variables. Each of them is used once. Imagine if they were used more widely. Perhaps dozens of components make use of <code class="highlighter-rouge">--text-color</code> to set the size of their SVG icons. You set that one variable and whether it is used one time or a hundred times all references to it will respond.</p>
+
+<h2 id="️-assignment">⚡️ Assignment</h2>
+
+<h2 id="responsive-font-size-component">Responsive Font Size Component</h2>
+
+<p>The ability to increase font size is an important accessibility consideration. Using a semantic HTML form, a single CSS Variable, and a little bit of JavaScript we can create a component that allows users to set their preferred font size. We’ll even use <code class="highlighter-rouge">localStorage</code> to remember and respond to their preference on their next visit.</p>
+
+<p>Here is a CodePen of the component we will be building:</p>
+
+<p data-height="265" data-theme-id="0" data-slug-hash="ObKKyP" data-default-tab="css,result" data-user="jpdevries" data-embed-version="2" data-pen-title="Font Size Preference Widget" class="codepen">See the Pen <a href="http://codepen.io/jpdevries/pen/ObKKyP/">Font Size Preference Widget</a> by JP DeVries (<a href="http://codepen.io/jpdevries">@jpdevries</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h4 id="source-code">Source Code</h4>
+<p>Familiarize yourself with the font size component source code below. We’ll go over it in detail together.</p>
+
+<h4 id="progressively-enhanced-html">Progressively Enhanced HTML</h4>
+<script src="https://gist.github.com/jpdevries/a94c03e1b0eb99a350163afd9398aa1d.js?file=index.html"></script>
+
+<p>Our HTML consists of a lightweight <code class="highlighter-rouge">form.widget</code>. The <code class="highlighter-rouge">.widget</code> class is used for layout styling to center the widget and keep it from growing too wide. A <code class="highlighter-rouge">h2</code> heading describes the component. But that’s not all. There are two clever things going on with our heading. Firstly, we’ve given it an <code class="highlighter-rouge">id="font-size"</code> attribute. No big deal. But why? This allows that component to be targeted using the URL hash location. If we have a font size component half way down our <code class="highlighter-rouge">mypage.html</code> linking to <code class="highlighter-rouge">mypage.html#font-size</code> will scroll the visitor down the page directly to our component. We are also using a <code class="highlighter-rouge">&lt;noscript&gt;</code> element for a message to enable JavaScript within our heading. This inline <code class="highlighter-rouge">&lt;noscript&gt;</code> element will be entirely ignored by script enabled browsers.</p>
+
+<p>Our set of radio inputs is wrapped in a <code class="highlighter-rouge">&lt;fieldset&gt;</code> element. The <code class="highlighter-rouge">&lt;fieldset&gt;</code> element is used to semantically group elements together under a <code class="highlighter-rouge">&lt;legend&gt;</code> which describes them. Each option has a <code class="highlighter-rouge">input[type="radio"]</code> and a corresponding label to describe the input. The inputs are initially disabled because they cannot function without JavaScript. So we’ll later use JavaScript to re-enable them.</p>
+
+<figure>
+<img src="http://j4p.us/3Z0g0o363T2g/Screen%20Shot%202016-12-30%20at%207.52.30%20AM.png" alt="Responsive Font Size Component reads Please Enable JavaScript to Choose a Font Size when JavaScript is not enabled" />
+<figcaption>When JavaScript is not available our component responds accordingly with disabled inputs and a please enable JavaScript&nbsp;message.</figcaption>
+</figure>
+
+<h4 id="css-with-native-variables">CSS with Native Variables</h4>
+<script src="https://gist.github.com/jpdevries/a94c03e1b0eb99a350163afd9398aa1d.js?file=style.css"></script>
+
+<p>Only three CSS declarations are required for our font size component! The rest is just to make the layout easier on the eye. Our component sets an initial <code class="highlighter-rouge">font-size</code> on the body to a <code class="highlighter-rouge">--font-size</code> CSS Variable with a default of <code class="highlighter-rouge">100%</code>. That’s the browser default so it doesn’t have an immediate affect. The reason we set it is so that we can override it later with our <code class="highlighter-rouge">--font-size</code> CSS Variable. Then we do just that! We use <code class="highlighter-rouge">body[data-font-size="medium"]</code> and <code class="highlighter-rouge">body[data-font-size="large"]</code> attribute selectors to override the value of our <code class="highlighter-rouge">--font-size</code> CSS Variable. When this variable is overridden our page will respond by repainting the component with the new values.</p>
+
+<h4 id="javascript">JavaScript</h4>
+<script src="https://gist.github.com/jpdevries/a94c03e1b0eb99a350163afd9398aa1d.js?file=script.js"></script>
+
+<p>Our JavaScript is a bit more advanced. First, we give something a try. We try and pull a <code class="highlighter-rouge">fontSize</code> value out of <code class="highlighter-rouge">localStorage</code>. If we found one we trigger a click event on the corresponding input and update the view. This allows users to set their preference once and have the page respond to it whenever they return. We then listen to when the radio inputs change and update the <code class="highlighter-rouge">localStorage</code> and <code class="highlighter-rouge">body</code> attribute. Lastly, we re-enable the radio inputs which are initially disabled to further convey to <code class="highlighter-rouge">no-js</code> users that they cannot use the component.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Art Directors invest heavily in the visual aesthetics that convey the brand’s style guide to the target audience. Even the most experienced Art Directors struggle with creating inclusive style guides that ensure site content is accessible to everyone. This is where accessibility preferences come in. You can have the best of both worlds by initially shipping a declaratively branding experience which is coded to respond to users accessibility preferences. Don’t be afraid to allow your accessibility preferences components to break the conventions of your style guide. While a style guide may call for 12px light gray text on a white background it should also use responsive design principles to react to user needs. With High Contrast set to Always, Font Size set to Large, and Font Family set to OpenDyslexic that small light gray text becomes large white text on a black background in an entirely different typeface. And that is ok.</p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Perhaps if inclusive design and <a href="https://twitter.com/hashtag/a11y?src=hash">#a11y</a> are valued, allowing accessibility preferences to alter your style guide is actually on brand.</p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/814894197987606528">December 30, 2016</a></blockquote>
+
+<p>If you find yourself pondering if such deviations from the style guide are “on brand” reflect on how accessibility relates to your brand. If inclusive design and accessibility are values your brand holds close, perhaps allowing accessibility preferences to alter the style guide is actually on brand.</p>
+
+<h2 id="related-resources">Related Resources</h2>
+<ul>
+  <li><a href="https://medium.com/markuptips/css-is-important-960a9921e454#.r0eg7pajt">CSS is !important</a></li>
+</ul>
+
+
+  </div>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Intro to Web Architecture</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Intro to Web Architecture
+            
+            </li>
+            
+            <li><a href="mailto:mrktps@devries.jp">mrktps@devries.jp</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/mrktps"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">mrktps</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/mrktps"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">mrktps</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>
+          A series of lessons introducing you to fundamental principles and design patterns of Web&nbsp;Architecture.
+        </p>
+        <p>
+          Brought to you by <a href="https://markup.tips">Markup&nbsp;Tips</a> and&nbsp;<a href="http://thinkful.com">Thinkful</a>.
+        </p>
+        <p>This content is brought to you free of advertisements. Gratiuities powered by SquareCash. <a href="https://cash.me/$MarkupTips">Leave&nbsp;a&nbsp;tip</a>.</p>
+      </div>
+    </div>
+
+  </div>
+  
+  <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</footer>
+
+  </body>
+
+</html>

@@ -4,6 +4,7 @@ title:  "📑 Leveraging the Browser Cache"
 date:   2016-12-28 10:37:34 -0800
 categories: production
 chapter: "2.6.0"
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_2/2.6.0-leveraging-the-browser-cache.markdown
 ---
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If your app.js is getting heavy ask yourself “is bundling leveraging the browser cache?”<br><br>Pull large frameworks &amp; libraries out.</p>&mdash; JP de Vries (@jpdevries) <a href="https://twitter.com/jpdevries/status/783567330571849728">October 5, 2016</a></blockquote> 

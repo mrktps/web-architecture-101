@@ -1,8 +1,9 @@
 ---
 layout: lesson
-title:  "JavaScript is Really Good 🚀👍"
+title:  "🚀 JavaScript is Really Good 👍"
 categories: accessibility javascript
 chapter: "4.8.0"
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_4/javascript-is-really-good.markdown
 ---
 
 

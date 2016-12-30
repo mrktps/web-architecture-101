@@ -1,0 +1,128 @@
+---
+layout: lesson
+title:  "♿️ Powering Accessible Styles with CSS Variables"
+date:   2016-12-28 10:37:34 -0800
+categories: accessibility CSS
+chapter: "4.2.0" 
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_4/4.2.0-powering-accessible-styles-with-CSS-variables.markdown
+---
+
+ *Together in this lesson we will cover the basics of CSS Variables along with a clever trick to use them to make your stylesheets more&nbsp;accessible.*
+
+When I first heard of CSS Variables I thought to myself &#8220;What's the point? I can already do that in Sass&#8221;. Turns out I was gleefully mistaken right about the time [Phillip Walton wrote about why he is excited about Native CSS&nbsp;Variables][phillipcssvariables].
+
+The <span title="To Long Didn't Read">TL;DR</span> is&nbsp;that:
+
+ - <strong><i>CSS&nbsp;Variables can do things that preprocessors variables cannot&nbsp;do</i></strong>
+ 
+Phillip demonstrates several practical use cases for CSS Variables such as [applying different style to different components without having to override selectors][phillipcodepen]. Using a similar concept, we can architect the components of our page to **respond to any given user's accessibility&nbsp;preferences**.
+
+<figure>
+  <a target="KdxmWL" href="http://codepen.io/philipwalton/pen/KdxmWL#code-area">
+    <img src="{{ site.baseurl }}/assets/images/cssvariables/custom-properties-contextual-styling-1400w.png" alt="One CSS Component with different styles based on the context of their location within the page">
+  </a>
+  <figcaption>Phillip's demo illustrates contextual styling of both links and buttons in the header of a site as well as the content&nbsp;area</figcaption>
+</figure>
+
+## Keeping it DRY with CSS Variable
+Before CSS Variables we'd have to get a bit hacky to override styles based on accessibility preferences. Even using another stylesheet to override styles and create an altered theme can be a painstaking process. We'd have to override each CSS selector with equal or great specificity. This not only required efforts of a CSS Developer but left our code wet and difficult to maintain. Having to make changes in multiple locations costs us technical debt that we'd rather not&nbsp;incur.
+
+CSS Variables save the day by allowing us to use dynamic variables as property values. These dynamic variables abide by the cascade just like normal&nbsp;CSS.
+
+## Accessibile Theme Switcher
+
+In this CodePen we add support for a simple high contrast theme without actually overriding any CSS&nbsp;properties:
+
+<p data-height="420" data-theme-id="0" data-slug-hash="jVgjpb" data-default-tab="css,result" data-user="jpdevries" data-embed-version="2" data-pen-title="High Contrast Theme with CSS Variables" class="codepen">See the Pen <a href="http://codepen.io/jpdevries/pen/jVgjpb/">High Contrast Theme with CSS Variables</a> by JP DeVries (<a href="http://codepen.io/jpdevries">@jpdevries</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<br>We use a `body[data-theme="highcontrast"]` scope to override the default values of our theme&nbsp;variables. As `body[data-theme="highcontrast"]` is painted the cascade says &#8220;Well, I was going to use these default property values but since `body` has a `.highcontrast` class we'll use these other more specific ones instead&#8221;. Notice that all this happens without us having to explicitly set or override properties on&nbsp;`body[data-theme="highcontrast"]`.
+
+Let's break it down. First we set some CSS properties on the `body` to CSS Variables for background color, text color, and font family. Our variables have defaults so they have value even when not&nbsp;set.
+
+```css
+body {
+  background: var(--background-color, white);
+  color: var(--text-color, currentColor);
+  font-family: var(--font-family, inherit);
+}
+```
+
+Next we set our CSS Variables to their high contrast&nbsp;values.
+
+```css 
+body[data-theme="highcontrast"] {
+  --background-color: black;
+  --text-color: white;
+  --font-family: sans-serif;
+}
+```
+
+In traditional CSS this would be accomplished like&nbsp;so:
+
+```css 
+body[data-theme="highcontrast"] {
+  background: black;
+  color: white;
+  font-family: sans-serif;
+}
+```
+
+{% comment %}
+{% include highlight.body.white-on-black.html %}
+{% endcomment %}
+
+So you might be thinking, what's the big deal? I can accomplish the same thing without CSS Variables. The advantages of cascading variables becomes more apparent as your style guide grows. In the above example we have three CSS Variables. Each of them is used once. Imagine if they were used more widely. Perhaps dozens of components make use of `--text-color` to set the size of their SVG&nbsp;icons. You set that one variable and whether it is used one time or a hundred times all references to it will&nbsp;respond.
+
+## ⚡️ Assignment
+
+## Responsive Font Size Component
+
+The ability to increase font size is an important accessibility consideration. Using a semantic HTML form, a single CSS Variable, and a little bit of JavaScript we can create a component that allows users to set their preferred font size. We'll even use `localStorage` to remember and respond to their preference on their next&nbsp;visit.
+
+Here is a CodePen of the component we will be&nbsp;building:
+
+<p data-height="265" data-theme-id="0" data-slug-hash="ObKKyP" data-default-tab="css,result" data-user="jpdevries" data-embed-version="2" data-pen-title="Font Size Preference Widget" class="codepen">See the Pen <a href="http://codepen.io/jpdevries/pen/ObKKyP/">Font Size Preference Widget</a> by JP DeVries (<a href="http://codepen.io/jpdevries">@jpdevries</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+#### Source Code
+Familiarize yourself with the font size component source code below. We'll go over it in detail&nbsp;together.
+ 
+#### Progressively Enhanced HTML 
+<script src="https://gist.github.com/jpdevries/a94c03e1b0eb99a350163afd9398aa1d.js?file=index.html"></script>
+
+Our HTML consists of a lightweight `form.widget`. The `.widget` class is used for layout styling to center the widget and keep it from growing too wide. A `h2` heading describes the component. But that's not all. There are two clever things going on with our heading. Firstly, we've given it an `id="font-size"` attribute. No big deal. But why? This allows that component to be targeted using the URL hash location. If we have a font size component half way down our `mypage.html` linking to `mypage.html#font-size` will scroll the visitor down the page directly to our&nbsp;component. We are also using a `<noscript>` element for a message to enable JavaScript within our heading. This inline `<noscript>` element will be entirely ignored by script enabled&nbsp;browsers. 
+
+Our set of radio inputs is wrapped in a `<fieldset>` element. The `<fieldset>` element is used to semantically group elements together under a `<legend>` which describes them. Each option has a `input[type="radio"]` and a corresponding label to describe the&nbsp;input. The inputs are initially disabled because they cannot function without JavaScript. So we'll later use JavaScript to re-enable&nbsp;them.
+
+<figure>
+<img src="http://j4p.us/3Z0g0o363T2g/Screen%20Shot%202016-12-30%20at%207.52.30%20AM.png" alt="Responsive Font Size Component reads Please Enable JavaScript to Choose a Font Size when JavaScript is not enabled">
+<figcaption>When JavaScript is not available our component responds accordingly with disabled inputs and a please enable JavaScript&nbsp;message.</figcaption>
+</figure>
+
+#### CSS with Native Variables
+<script src="https://gist.github.com/jpdevries/a94c03e1b0eb99a350163afd9398aa1d.js?file=style.css"></script>
+
+Only three CSS declarations are required for our font size component! The rest is just to make the layout easier on the eye. Our component sets an initial `font-size` on the body to a `--font-size` CSS Variable with a default of `100%`. That's the browser default so it doesn't have an immediate affect. The reason we set it is so that we can override it later with our `--font-size` CSS Variable. Then we do just that! We use `body[data-font-size="medium"]` and `body[data-font-size="large"]` attribute selectors to override the value of our `--font-size` CSS Variable. When this variable is overridden our page will respond by repainting the component with the new&nbsp;values.
+
+#### JavaScript
+<script src="https://gist.github.com/jpdevries/a94c03e1b0eb99a350163afd9398aa1d.js?file=script.js"></script>
+
+Our JavaScript is a bit more advanced. First, we give something a try. We try and pull a `fontSize` value out of `localStorage`. If we found one we trigger a click event on the corresponding input and update the view. This allows users to set their preference once and have the page respond to it whenever they return. We then listen to when the radio inputs change and update the `localStorage` and `body` attribute. Lastly, we re-enable the radio inputs which are initially disabled to further convey to `no-js` users that they cannot use the&nbsp;component.
+
+## Conclusion 
+Art Directors invest heavily in the visual aesthetics that convey the brand's style guide to the target audience. Even the most experienced Art Directors struggle with creating inclusive style guides that ensure site content is accessible to everyone. This is where accessibility preferences come in. You can have the best of both worlds by initially shipping a declaratively branding experience which is coded to respond to users accessibility preferences. Don't be afraid to allow your accessibility preferences components to break the conventions of your style guide. While a style guide may call for 12px light gray text on a white background it should also use responsive design principles to react to user needs. With High Contrast set to Always, Font Size set to Large, and Font Family set to OpenDyslexic that small light gray text becomes large white text on a black background in an entirely different typeface. And that is&nbsp;ok.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Perhaps if inclusive design and <a href="https://twitter.com/hashtag/a11y?src=hash">#a11y</a> are valued, allowing accessibility preferences to alter your style guide is actually on brand.</p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/814894197987606528">December 30, 2016</a></blockquote>
+
+If you find yourself pondering if such deviations from the style guide are &#8220;on brand&#8221; reflect on how accessibility relates to your brand. If inclusive design and accessibility are values your brand holds close, perhaps allowing accessibility preferences to alter the style guide is actually on&nbsp;brand.
+
+## Related Resources 
+ - [CSS is !important][cssisimportant]
+
+
+[phillipcssvariables]: https://philipwalton.com/articles/why-im-excited-about-native-css-variables/
+[phillipcodepen]: http://codepen.io/philipwalton/pen/KdxmWL#code-area
+[cssisimportant]: https://medium.com/markuptips/css-is-important-960a9921e454#.r0eg7pajt
+
+

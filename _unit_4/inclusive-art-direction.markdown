@@ -3,6 +3,7 @@ layout: lesson
 title:  "👥 Inclusive Art Direction"
 categories: accessibility 
 chapter: "4.6.0"
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_4/inclusive-art-direction.markdown
 ---
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Float label pattern <a href="https://t.co/wDtLsxAS2r">https://t.co/wDtLsxAS2r</a> via <a href="https://twitter.com/feather">@feather</a> at <a href="https://twitter.com/hashtag/aeasf?src=hash">#aeasf</a></p>&mdash; Brad Frost (@brad_frost) <a href="https://twitter.com/brad_frost/status/793575128890085376">November 1, 2016</a></blockquote> 

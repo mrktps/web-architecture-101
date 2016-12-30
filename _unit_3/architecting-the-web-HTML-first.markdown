@@ -3,6 +3,7 @@ layout: lesson
 title:  "👷‍♀️ Architecting the Web HTML–first"
 categories: accessibility  
 chapter: "3.7.0"
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_3/architecting-the-web-HTML-first.markdown
 ---
 
 <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Why do your users show up? Odds are it is for content. Deliver content interpretively as HTML to ensure content is accessible <a href="https://t.co/21i5XZkPwK">pic.twitter.com/21i5XZkPwK</a></p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/794312006274809856">November 3, 2016</a></blockquote> 

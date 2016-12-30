@@ -5,7 +5,19 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta"><span class="post-meta"><span class="">Lesson </span>{{ page.chapter}}</span></p>
+    <p class="post-meta"><span><span class="">Lesson </span>{{ page.chapter}}</span></p>
+    
+    {% assign author = site.data.authors[page.author] %}
+    {% if author %}
+      {% include written_by.html %}
+    {% endif %}
+    
+    {% if page.githubedit %}
+      <aside>
+        <p><a href="{{ page.githubedit }}">Improve this Page</a></p>
+      </aside>
+    {% endif %}
+    
   </header>
 
   <div class="post-content" itemprop="articleBody">

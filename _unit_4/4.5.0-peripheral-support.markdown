@@ -1,7 +1,8 @@
 ---
 layout: lesson
-title:  "Peripheral Support 🖱⌨️"
+title:  "Enhancing Abilities with Peripheral Support 🖱⌨️"
 categories: accessibility 
 chapter: "4.5.0"
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_4/4.5.0-peripheral-support.markdown
 ---
 

@@ -2,6 +2,7 @@
 layout: lesson
 title:  "👷‍♀️ Becoming a Social Architect"
 chapter: "0.1.0"
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_0/becoming-a-social-architect.markdown
 ---
 
 Similar to an architect designing a public building in the physical world, as a Web Architect it will be your responsibility to inclusively provide for, shelter, and protect users of the world wide&nbsp;web. 

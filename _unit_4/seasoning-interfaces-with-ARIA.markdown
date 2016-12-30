@@ -3,5 +3,6 @@ layout: lesson
 title:  "Seasoning Interfaces with ARIA 👨‍🍳"
 categories: accessibility ARIA 
 chapter: "4.3.0"
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_4/seasoning-interfaces-with-ARIA.markdown
 ---
 

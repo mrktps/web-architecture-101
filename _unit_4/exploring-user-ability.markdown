@@ -3,6 +3,7 @@ layout: lesson
 title:  "Exploring User Ability 💪😃"
 categories: accessibility 
 chapter: "4.1.0"
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_4/exploring-user-ability.markdown
 ---
 
 ### 📼 Allowing Users to Access Their Abilities&nbsp;Workshop

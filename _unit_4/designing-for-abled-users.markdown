@@ -1,8 +1,9 @@
 ---
 layout: lesson
-title:  "🏃🏃‍♀️ Designing for Abled Users"
+title:  "🏃🏃‍♀️ Designing for Abled Users?"
 categories: accessibility 
 chapter: "4.9.0"
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_4/designing-for-abled-users.markdown
 ---
 
 <blockquote class="twitter-tweet" data-cards="hidden" data-lang="en"><p lang="en" dir="ltr">Accessibility Basics: Designing for Visual Impairment <a href="https://t.co/Vj95dGMPJD">https://t.co/Vj95dGMPJD</a> <a href="https://twitter.com/hashtag/a11y?src=hash">#a11y</a> <a href="https://twitter.com/hashtag/design?src=hash">#design</a> <a href="https://twitter.com/hashtag/color?src=hash">#color</a></p>&mdash; Web Axe (@webaxe) <a href="https://twitter.com/webaxe/status/804815438077038592">December 2, 2016</a></blockquote> 

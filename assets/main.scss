@@ -29,6 +29,8 @@ $on-laptop:        800px;
 $black: rgb(8,8,8);
 $white: white;
 
+$manilla:          rgb(255,255,200);
+
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -41,6 +43,8 @@ $white: white;
 // Import partials from the `minima` theme.
 @import "minima";
 
+@import "neat/neat";
+
 html {
   --text-color: $text-color;
   --brand-color: $brand-color;
@@ -49,6 +53,7 @@ html {
   --grey-color-dark: $grey-color-dark;
   --background-color: $background-color;
   --site-title-color: $grey-color-dark;
+  --manilla: $manilla;
 }
 
 body {
@@ -91,10 +96,13 @@ code, pre, .mono {
 
 .post-list {
   li {
+    padding:.5em;
     &:target {
+      background:$manilla;
+      background:var(--manilla);
       outline:2px solid $brand-color;
       outline:2px solid var(--brand-color);
-      outline-offset:.5em;
+      //outline-offset:.5em;
       h2,h3 {
         a {
           font-weight:bold;
@@ -105,6 +113,10 @@ code, pre, .mono {
 }
 
 summary {
+  margin-bottom:1em;
+  details[open] & {
+    margin-bottom:0;
+  }
   h2,h3 {
     display:inline;
   }
@@ -125,8 +137,11 @@ img {
 }
 
 figure {
+  text-align: center;
   img {
-    //border:1px solid var(--grey-color);
+    border:1px solid var(--grey-color);
+    margin-left:auto;
+    margin-right:auto;
   }
 }
 
@@ -134,12 +149,50 @@ figcaption {
   margin-top: 0.5em;
   text-align: center;
   color: var(--grey-color);
-  font-style: italic;
-  
+  font-style: italic;  
   font-size: 1.2rem;
+}
+
+body .gist .gist-file {
+  margin-bottom:2em;
+}
+
+.cp_embed_iframe {
+  margin-bottom:1em;
+}
+
+.twitter-tweet {
+  margin-bottom:1em !important;
 }
 
 iframe[id*="twitter-widget"] {
   margin-right:auto !important;
   margin-left:auto !important;
+}
+
+.post-header {
+  aside {
+    @media screen and (min-width: 641px) {
+      float:right;
+    }
+  }
+}
+
+.written-by {
+  @media screen and (min-width: 641px) {
+    float:left;
+  }
+}
+
+.post-list {
+  > li {
+    margin-bottom:0;
+    h2,h3 {
+      margin-bottom:0;
+    }
+  }
+}
+
+.post-header {
+  @include outer-container;
 }

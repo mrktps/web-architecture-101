@@ -452,13 +452,20 @@ pre {
     color: #099; }
 
 html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+html {
   --text-color: #111;
   --brand-color: #2a7ae2;
   --brand-color-dark: #1756a9;
   --grey-color: #828282;
   --grey-color-dark: #424242;
   --background-color: #fdfdfd;
-  --site-title-color: #424242; }
+  --site-title-color: #424242;
+  --manilla: #ffffc8; }
 
 body {
   color: var(--text-color);
@@ -483,15 +490,22 @@ a {
 code, pre, .mono {
   font-family: 'Fira Mono', monospace; }
 
-.post-list li:target {
-  outline: 2px solid #2a7ae2;
-  outline: 2px solid var(--brand-color);
-  outline-offset: .5em; }
-  .post-list li:target h2 a, .post-list li:target h3 a {
-    font-weight: bold; }
+.post-list li {
+  padding: .5em; }
+  .post-list li:target {
+    background: #ffffc8;
+    background: var(--manilla);
+    outline: 2px solid #2a7ae2;
+    outline: 2px solid var(--brand-color); }
+    .post-list li:target h2 a, .post-list li:target h3 a {
+      font-weight: bold; }
 
-summary h2, summary h3 {
-  display: inline; }
+summary {
+  margin-bottom: 1em; }
+  details[open] summary {
+    margin-bottom: 0; }
+  summary h2, summary h3 {
+    display: inline; }
 
 .icon svg path, svg.icon path {
   fill: var(--grey-color); }
@@ -502,6 +516,13 @@ summary h2, summary h3 {
 img {
   height: auto; }
 
+figure {
+  text-align: center; }
+  figure img {
+    border: 1px solid var(--grey-color);
+    margin-left: auto;
+    margin-right: auto; }
+
 figcaption {
   margin-top: 0.5em;
   text-align: center;
@@ -509,6 +530,37 @@ figcaption {
   font-style: italic;
   font-size: 1.2rem; }
 
+body .gist .gist-file {
+  margin-bottom: 2em; }
+
+.cp_embed_iframe {
+  margin-bottom: 1em; }
+
+.twitter-tweet {
+  margin-bottom: 1em !important; }
+
 iframe[id*="twitter-widget"] {
   margin-right: auto !important;
   margin-left: auto !important; }
+
+@media screen and (min-width: 641px) {
+  .post-header aside {
+    float: right; } }
+
+@media screen and (min-width: 641px) {
+  .written-by {
+    float: left; } }
+
+.post-list > li {
+  margin-bottom: 0; }
+  .post-list > li h2, .post-list > li h3 {
+    margin-bottom: 0; }
+
+.post-header {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .post-header::after {
+    clear: both;
+    content: "";
+    display: block; }

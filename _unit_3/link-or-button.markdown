@@ -3,6 +3,7 @@ layout: lesson
 title:  "Is it a Link or a Button? 🔗🤔"
 categories: design
 chapter: "3.10.0"
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_3/link-or-button.markdown
 ---
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If you don&#39;t have a valid href value for your &lt;a&gt;, then you should probably use a &lt;button&gt;</p>&mdash; Ian Devlin (@iandevlin) <a href="https://twitter.com/iandevlin/status/804818964417277952">December 2, 2016</a></blockquote> 
