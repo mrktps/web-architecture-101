@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Going Offline With Service Workers"
+title:  "☎️ Going Offline With Service Workers"
 date:   2016-12-28 10:37:34 -0800
 categories: javascript 
 chapter: "4.4.0"

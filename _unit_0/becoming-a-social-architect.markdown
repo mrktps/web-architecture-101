@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Becoming a Social Architect"
+title:  "👷‍♀️ Becoming a Social Architect"
 chapter: "0.1.0"
 ---
 

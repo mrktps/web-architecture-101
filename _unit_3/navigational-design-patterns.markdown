@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Navigational Design Patterns"
+title:  "↔️ Navigational Design Patterns"
 categories: design
 chapter: "3.9.0"
 ---

@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Inclusive Icons with Emoji"
+title:  "Inclusive Icons with Emoji 👾🤖"
 categories: accessibility 
 chapter: "4.7.0"
 ---

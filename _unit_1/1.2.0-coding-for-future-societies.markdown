@@ -1,8 +1,12 @@
 ---
 layout: lesson
-title:  "Coding for Future Societies"
+title:  "♿️❤️ Coding for Future Societies"
 date:   2016-12-28 10:37:34 -0800
 categories: 1.0.3 accessibility social
 chapter: '1.2.0'
 ---
 
+<figure>
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/futuristic-building/futuristic-building-1600.jpg" alt="A profile shot of a futuristic building" width="1600" height="1067">
+  <figcaption>Futuristic architecture serves society at&nbsp;large</figcaption>  
+</figure>

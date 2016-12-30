@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Usability Testing"
+title:  "Usability Testing 🖱⌨️"
 date:   2016-12-28 10:37:34 -0800
 categories: usability testing
 chapter: "2.2.0"

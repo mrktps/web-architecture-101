@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Exploring User Ability"
+title:  "Exploring User Ability 💪😃"
 categories: accessibility 
 chapter: "4.1.0"
 ---

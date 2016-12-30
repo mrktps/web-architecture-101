@@ -119,3 +119,27 @@ summary {
 .post-meta {
   color: var(--grey-color);
 }
+
+img {
+  height: auto;
+}
+
+figure {
+  img {
+    //border:1px solid var(--grey-color);
+  }
+}
+
+figcaption {
+  margin-top: 0.5em;
+  text-align: center;
+  color: var(--grey-color);
+  font-style: italic;
+  
+  font-size: 1.2rem;
+}
+
+iframe[id*="twitter-widget"] {
+  margin-right:auto !important;
+  margin-left:auto !important;
+}

@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Responsibly Architecting the World Wide Web"
+title:  "Responsibly Architecting the World Wide Web 🌐🤔"
 date:   2016-12-28 11:37:34 -0800
 categories: 1.0 accessibility social
 chapter: "1.1.0"

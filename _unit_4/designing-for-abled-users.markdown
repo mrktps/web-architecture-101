@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Designing for Abled Users"
+title:  "🏃🏃‍♀️ Designing for Abled Users"
 categories: accessibility 
 chapter: "4.9.0"
 ---

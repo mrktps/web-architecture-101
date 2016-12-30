@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "JavaScript is Really Good"
+title:  "JavaScript is Really Good 🚀👍"
 categories: accessibility javascript
 chapter: "4.8.0"
 ---

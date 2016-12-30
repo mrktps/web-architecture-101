@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Is it a Link or a Button?"
+title:  "Is it a Link or a Button? 🔗🤔"
 categories: design
 chapter: "3.10.0"
 ---

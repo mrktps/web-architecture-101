@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Inclusive Art Direction"
+title:  "👥 Inclusive Art Direction"
 categories: accessibility 
 chapter: "4.6.0"
 ---

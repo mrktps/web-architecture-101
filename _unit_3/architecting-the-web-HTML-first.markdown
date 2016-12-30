@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Architecting the Web HTML–first"
+title:  "👷‍♀️ Architecting the Web HTML–first"
 categories: accessibility  
 chapter: "3.7.0"
 ---

@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "There is no Speed in Web Performance"
+title:  "There is no Speed in Web Performance 🚫🚀"
 date:   2016-12-28 10:37:34 -0800
 categories: performance optimization
 chapter: "2.7.0"

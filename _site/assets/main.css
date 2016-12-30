@@ -498,3 +498,17 @@ summary h2, summary h3 {
 
 .post-meta {
   color: var(--grey-color); }
+
+img {
+  height: auto; }
+
+figcaption {
+  margin-top: 0.5em;
+  text-align: center;
+  color: var(--grey-color);
+  font-style: italic;
+  font-size: 1.2rem; }
+
+iframe[id*="twitter-widget"] {
+  margin-right: auto !important;
+  margin-left: auto !important; }

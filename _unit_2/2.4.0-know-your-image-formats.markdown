@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "Know Your Image Formats"
+title:  "🖼💡 Know Your Image Formats"
 date:   2016-12-28 10:37:34 -0800
 categories: production
 chapter: "2.4.0"
