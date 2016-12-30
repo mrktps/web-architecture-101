@@ -22,9 +22,9 @@ layout: default
             <ul class="post-list">
               <li id="l{{ post.chapter }}">
                 <span class="post-meta"><span class="">Lesson </span>{{ post.chapter}}</span>
-                <h2>
+                <h3>
                   <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-                </h2>
+                </h3>
               </li>
             </ul>
           {% endfor %}

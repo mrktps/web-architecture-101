@@ -491,7 +491,7 @@ code, pre, .mono {
     font-weight: bold; }
 
 summary h2, summary h3 {
-  display: inline-block; }
+  display: inline; }
 
 .icon svg path, svg.icon path {
   fill: var(--grey-color); }
