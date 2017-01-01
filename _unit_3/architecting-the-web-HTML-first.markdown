@@ -1,6 +1,6 @@
 ---
 layout: lesson
-title:  "👷‍♀️ Architecting the Web HTML–first"
+title:  "📐 Architecting the Web HTML–first"
 categories: accessibility  
 chapter: "3.7.0"
 githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_3/architecting-the-web-HTML-first.markdown

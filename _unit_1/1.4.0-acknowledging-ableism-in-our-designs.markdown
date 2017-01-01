@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title:  "Acknowledging Ableism in Our Designs 😯"
-date:   2016-12-28 10:37:34 -0800
+date:   2016-12-21 10:37:34 -0800
 categories: accessibility social
 chapter: "1.4.0"
 githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_1/1.4.0-acknowledging-ableism-in-our-designs.markdown

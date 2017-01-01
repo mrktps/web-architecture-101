@@ -15,7 +15,9 @@ layout: default
       {% if collection.title != null %}
         <details open>
           <summary>
-            <h2>{{ collection.title }}</h2>
+            <h2>
+              {{ collection.title }}
+            </h2>
           </summary>
           {% assign sortedPosts = collection.docs | sort: 'chapter' %}
           <ul class="post-list">

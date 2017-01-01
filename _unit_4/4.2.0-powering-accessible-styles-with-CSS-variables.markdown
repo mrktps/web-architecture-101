@@ -24,7 +24,7 @@ Phillip demonstrates several practical use cases for CSS Variables such as [appl
   <figcaption>Phillip's demo illustrates contextual styling of both links and buttons in the header of a site as well as the content&nbsp;area</figcaption>
 </figure>
 
-## Keeping it DRY with CSS Variable
+## Keeping it DRY with CSS&nbsp;Variable
 Before CSS Variables we'd have to get a bit hacky to override styles based on accessibility preferences. Even using another stylesheet to override styles and create an altered theme can be a painstaking process. We'd have to override each CSS selector with equal or great specificity. This not only required efforts of a CSS Developer but left our code wet and difficult to maintain. Having to make changes in multiple locations costs us technical debt that we'd rather not&nbsp;incur.
 
 CSS Variables save the day by allowing us to use dynamic variables as property values. These dynamic variables abide by the cascade just like normal&nbsp;CSS.
@@ -74,7 +74,37 @@ body[data-theme="highcontrast"] {
 
 So you might be thinking, what's the big deal? I can accomplish the same thing without CSS Variables. The advantages of cascading variables becomes more apparent as your style guide grows. In the above example we have three CSS Variables. Each of them is used once. Imagine if they were used more widely. Perhaps dozens of components make use of `--text-color` to set the size of their SVG&nbsp;icons. You set that one variable and whether it is used one time or a hundred times all references to it will&nbsp;respond.
 
+<section class="assignment">
+  <h2 id="️assignment">⚡️ Assignment</h2>
+  <p>CSS Variables still need to sink in. Time for an assignment. Create a one page landing page complete with site navigation, branding, and some lorem ipsum content. In a rush? <a href="https://codepen.io/tag/landingpage/">Find an existing landing page CodePen and fork it</a>.</p>
+  <p>Once you have your styled page <strong><i>abstract the primary styles such as background and text color to use CSS Variables</i></strong>. Begin creating an alternative theme. Create CSS Variables as needed to make your component property values respond to the cascade on their own. If your design contains any SVG graphics try and fill them with a CSS Variable that can change from theme to theme.</p>
+</section>
+
+<aside class="balanced subtle">
+<p>
+Once your CodePen assignment is complete turn it in via Twitter. We can't wait to check it&nbsp;out.
+</p>
+<div>
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-mention-button twitter-mention-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.3748f7cda49448f6c6f7854238570ba0.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2F127.0.0.1%3A4000%2Fintro-web-architecture%2Flessons%2F4.2.0-powering-accessible-styles-with-CSS-variables%2F&amp;screen_name=mrktps&amp;size=l&amp;text=Just%20turned%20in%20my%20Intro%20to%20Web%20Architecture%20CSS%20Variables%20assignment!&amp;time=1483147102710&amp;type=mention" style="position: static; visibility: visible; width: 148px; height: 28px;" data-screen-name="mrktps"></iframe><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</aside>
+
+{% comment %}
 ## ⚡️ Assignment
+
+CSS Variables still need to sink in. Time for an assignment. Create a one page landing page complete with site navigation, branding, and some lorem ipsum content. In a rush? [Find an existing landing page CodePen and fork it](https://codepen.io/tag/landingpage/). Once you have your styled page abstract the primary styles such as background and text color to CSS Variables. Begin creating an alternative theme. Create CSS Variables as needed to make your component property values respond to the cascade on their own. If your design contains any SVG graphics try and fill them with a CSS Variable that can change from theme to theme.
+
+
+<aside class="balanced subtle">
+<p>
+Once your CodePen assignment is complete turn it in via Twitter. We can't wait to check it&nbsp;out.
+</p>
+<div>
+<a href="https://twitter.com/intent/tweet?screen_name=mrktps" class="twitter-mention-button" data-size="large" data-text="Just turned in my Intro to Web Architecture CSS Variables assignment!" data-show-count="false">Tweet to @mrktps</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</aside>
+{% endcomment %}
+
 
 ## Responsive Font Size Component
 

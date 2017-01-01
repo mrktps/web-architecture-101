@@ -7,5 +7,5 @@ chapter: "3.3.0"
 githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_3/bulletproof-performance-with-server-side-rendering.markdown
 ---
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">With a Node server you can use JavaScript to not need to initially use on JavaScript on the front end.<br><br>So meta.</p>&mdash; JP de Vries (@jpdevries) <a href="https://twitter.com/jpdevries/status/787052707752341504">October 14, 2016</a></blockquote> 
+
 

@@ -1,7 +1,7 @@
 ---
 layout: lesson
 title:  "♿️❤️ Coding for Future Societies"
-date:   2016-12-28 10:37:34 -0800
+date:   2016-12-19 10:37:34 -0800
 categories: 1.0.3 accessibility social
 chapter: '1.2.0'
 githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_1/1.2.0-coding-for-future-societies.markdown

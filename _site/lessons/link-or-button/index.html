@@ -8,66 +8,87 @@
 
   <title>Is it a Link or a Button? 🔗🤔</title>
   
+  
+  
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="If you don&amp;#39;t have a valid href value for your &amp;lt;a&amp;gt;, then you should probably use a &amp;lt;button&amp;gt;&amp;mdash; Ian Devlin (@iandevlin) December 2, 2016">
+  <meta name="description" content="If you don&#39;t have a valid href value for your &amp;lt;a&amp;gt;, then you should probably use a &amp;lt;button&amp;gt; — Ian Devlin (@iandevlin) December 2, 2016">
 
   <link rel="stylesheet" href="/intro-web-architecture/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/intro-web-architecture/lessons/link-or-button/">
+  <link rel="canonical" href="/intro-web-architecture/lessons/link-or-button/">
   <link rel="alternate" type="application/rss+xml" title="Intro to Web Architecture" href="/intro-web-architecture/feed.xml">
   
   
   
-  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  </noscript>
   
   <style type="text/css" media="screen">
     body.white-on-black {
       --background-color: rgb(14,14,14);
       --text-color: white;
+      --manilla-text-color: rgb(245, 245, 245);
       --brand-color: rgb(210, 210, 210);
       --brand-color-dark: rgb(180, 180, 180);
       --site-title-color: rgb(220, 220, 220);
       --manilla: rgb(24,24,24);
+      --manilla-border-color: rgb(32,32,32);
     }
   </style>
 </head>
 
-  <body>
+  <body class="sticky">
 
     <header class="site-header" role="banner">
 
   <div class="wrapper">
 
-    <a class="site-title" href="/intro-web-architecture/">Intro to Web Architecture</a>
+    <h1>
+      <a class="site-title" href="/intro-web-architecture/">
+        <svg class="icon" width="1em" height="1em">
+          <use xlink:href="/intro-web-architecture/assets/images/icons/icons.svg#logo"></use>
+        </svg>
+        Intro to Web Architecture
+      </a>
+    </h1>
 
     <nav class="site-nav">
-      <span class="menu-icon">
-        <svg viewBox="0 0 18 15" width="18px" height="15px">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </span>
-
       <div class="trigger">
         
           
-          <a class="page-link" href="/intro-web-architecture/about/">About</a>
+            
+              <a class="page-link" href="/intro-web-architecture/about/"> About </a>
+            
           
         
           
-          <a class="page-link" href="/intro-web-architecture/humans">Humans</a>
+            
+              <a class="page-link" href="/intro-web-architecture/humans"> Humans </a>
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+              <a class="page-link" href="/intro-web-architecture/prefs/"> Preferences </a>
+            
           
         
           
         
           
-        
-          
-          <a class="page-link" href="/intro-web-architecture/source.html">Source Code</a>
+            
           
         
           
-        
+            
           
         
       </div>
@@ -76,7 +97,6 @@
   </div>
 
 </header>
-
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -103,12 +123,34 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If you don&#39;t have a valid href value for your &lt;a&gt;, then you should probably use a &lt;button&gt;</p>&mdash; Ian Devlin (@iandevlin) <a href="https://twitter.com/iandevlin/status/804818964417277952">December 2, 2016</a></blockquote>
+    <blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">
+If you don't have a valid href value for your &lt;a&gt;, then you should probably use a &lt;button&gt;
+</p>
+— Ian Devlin (<span class="citation" data-cites="iandevlin">@iandevlin</span>) <a href="https://twitter.com/iandevlin/status/804818964417277952">December 2, 2016</a>
+</blockquote>
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">
+In other words, if you can’t right click and open in a new tab, it’s a &lt;button&gt; <a href="https://t.co/P7klqadRJa">https://t.co/P7klqadRJa</a>
+</p>
+— Markup Tips (<span class="citation" data-cites="mrktps">@mrktps</span>) <a href="https://twitter.com/mrktps/status/804822549364408324">December 2, 2016</a>
+</blockquote>
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">
+DEV's if you don't have href on &lt;a&gt; tags they won't get keyboard focus. Use a &lt;button&gt; or at least provide an href value. <a href="https://twitter.com/hashtag/a11y?src=hash">#a11y</a> <a href="https://twitter.com/hashtag/WCAG?src=hash">#WCAG</a> 2.2.1
+</p>
+— David MacDonald (<span class="citation" data-cites="davidmacd">@davidmacd</span>) <a href="https://twitter.com/davidmacd/status/788644719039483904">October 19, 2016</a>
+</blockquote>
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">In other words, if you can’t right click and open in a new tab, it’s a &lt;button&gt; <a href="https://t.co/P7klqadRJa">https://t.co/P7klqadRJa</a></p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/804822549364408324">December 2, 2016</a></blockquote>
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">DEV&#39;s if you don&#39;t have href on &lt;a&gt; tags they won&#39;t get keyboard focus. Use a &lt;button&gt; or at least provide an href value. <a href="https://twitter.com/hashtag/a11y?src=hash">#a11y</a> <a href="https://twitter.com/hashtag/WCAG?src=hash">#WCAG</a> 2.2.1</p>&mdash; David MacDonald (@davidmacd) <a href="https://twitter.com/davidmacd/status/788644719039483904">October 19, 2016</a></blockquote>
-
+  </div>
+  
+  <div class="PageNavigation">
+    
+      <a class="prev" href="/intro-web-architecture/lessons/designing-responsively-beyond-the-viewport/">&laquo; 📲  Designing Responsively Beyond the Viewport 👀</a>
+    
+    
+      <a class="next" href="/intro-web-architecture/lessons/navigational-design-patterns/">↔️ Navigational Design Patterns &raquo;</a>
+    
   </div>
 
   
@@ -170,6 +212,39 @@
   </div>
   
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      const link = document.createElement('link');
+      link.setAttribute('href', 'https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300i,400,400i,500,500i,700,700i');
+      link.setAttribute('rel', 'stylesheet');
+      link.setAttribute('media', 'screen');
+      
+      document.querySelector('html > head').appendChild(link);
+      
+      document.body.classList.add('loaded');
+      
+      document.addEventListener("scroll", function(event) {
+        if(window.scrollY < 1) document.body.classList.add('sticky');
+      });
+      
+      window.addEventListener("hashchange", function() {        
+        document.body.classList.remove('sticky');
+        
+        recursivelyOpenClosestDetails(document.getElementById(location.hash.slice(1)));
+        
+        function recursivelyOpenClosestDetails(element) {
+          const closestDetails = element.parentElement.closest('details');
+          
+          try {
+            closestDetails.setAttribute('open', 'true');
+          } catch(e) { return false }
+          
+          recursivelyOpenClosestDetails(closestDetails);
+        }
+        
+      }, false);
+    });
+  </script>
 
 </footer>
 

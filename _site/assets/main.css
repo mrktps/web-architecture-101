@@ -11,7 +11,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 "Fira Sans", sans-serif;
+  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -471,6 +471,132 @@ body {
   color: var(--text-color);
   background-color: var(--background-color); }
 
+.site-header, .site-footer {
+  transition: all 420ms ease; }
+  .site-header.heavy, .site-header:hover, .site-footer.heavy, .site-footer:hover {
+    --background-color: #080808;
+    --text-color: white;
+    --site-title-color: var(--text-color, white);
+    --grey-color: #c8c8c8;
+    --brand-color: white;
+    --brand-color-dark: #f0f0f0;
+    background: var(--background-color, #080808);
+    color: var(--text-color, #080808); }
+    @media screen and (max-width: 600px) {
+      .site-header.heavy .site-nav, .site-header:hover .site-nav, .site-footer.heavy .site-nav, .site-footer:hover .site-nav {
+        background: var(--text-color, white); }
+        .site-header.heavy .site-nav .page-link, .site-header:hover .site-nav .page-link, .site-footer.heavy .site-nav .page-link, .site-footer:hover .site-nav .page-link {
+          color: var(--background-color, #080808); } }
+
+.site-title {
+  position: relative;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2rem;
+  line-height: 1;
+  margin-top: .5rem; }
+  @media screen and (min-width: 601px) {
+    .site-title .icon {
+      position: absolute;
+      right: calc(100% + 0.2em);
+      top: 0; } }
+  @media screen and (max-width: 600px) {
+    .site-title {
+      float: none;
+      text-align: center;
+      display: block; }
+      .site-title .icon {
+        transform: translateY(0.15em); } }
+
+.balanced {
+  text-align: center; }
+
+iframe[id*="twitter-widget"] {
+  margin-top: .5em; }
+
+aside.subtle {
+  max-width: 66%;
+  margin: 2em auto;
+  font-style: italic; }
+  aside.subtle > p:first-child {
+    margin-bottom: 0; }
+
+.assignment {
+  background: var(--manilla, #ffffc8);
+  padding: 1.5em;
+  color: var(--manilla-text-color, #626200);
+  border: 1px solid #959500;
+  border-color: var(--manilla-border-color, #959500);
+  margin: 2em auto;
+  border-radius: 0.4em;
+  max-width: 74%; }
+  .assignment h2, .assignment h3 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold; }
+  .assignment p:last-child {
+    margin-bottom: 0; }
+
+blockquote.legible {
+  font-size: 1.6rem;
+  text-align: center; }
+
+blockquote .legible {
+  font-size: 1.6rem;
+  display: block; }
+
+.subtle {
+  color: currentColor; }
+  .subtle.very:hover, .subtle.very:visited {
+    color: currentColor; }
+
+@media screen and (min-width: 641px) {
+  .PageNavigation {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .PageNavigation > * {
+      margin-bottom: 1em; }
+      .PageNavigation > *:last-child {
+        margin-bottom: 0; } }
+
+.site-header {
+  border-top: 2px solid #424242;
+  border-bottom: 2px solid #424242;
+  border-color: var(--text-color); }
+  @media screen and (min-width: 641px) and (min-height: 321px) {
+    body.sticky .site-header {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      background: var(--background-color, white); } }
+
+.site-nav {
+  font-size: 1.2em;
+  max-width: 12em;
+  margin-left: auto;
+  margin-right: auto; }
+  .site-nav .menu-icon {
+    display: none; }
+  @media screen and (max-width: 600px) {
+    .site-nav {
+      position: static;
+      top: auto;
+      right: auto;
+      float: none;
+      text-align: center;
+      margin-bottom: 1rem; }
+      .site-nav .trigger {
+        display: block;
+        padding-bottom: 0 !important; } }
+  @media screen and (min-width: 601px) {
+    .site-nav {
+      max-width: none; } }
+  .site-nav .page-link {
+    line-height: 3;
+    margin-left: auto;
+    margin-right: auto; }
+
 .site-nav .page-link {
   color: var(--text-color); }
 
@@ -504,7 +630,7 @@ summary {
   margin-bottom: 1em; }
   details[open] summary {
     margin-bottom: 0; }
-  summary h2, summary h3 {
+  summary h1, summary h2, summary h3, summary h4, summary h5, summary h6 {
     display: inline; }
 
 .icon svg path, svg.icon path {
@@ -564,3 +690,6 @@ iframe[id*="twitter-widget"] {
     clear: both;
     content: "";
     display: block; }
+
+body.loaded {
+  font-family: 'Fira Sans', sans-serif; }

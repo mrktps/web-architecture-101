@@ -7,3 +7,76 @@ chapter: "2.4.0"
 githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_2/2.4.0-know-your-image-formats.markdown
 ---
 
+Understanding various image formats enables us to get the most out of our images. With the correct formats and optimizations we can deliver higher quality images with smaller file&nbsp;sizes.
+
+
+## JPEG
+<figure>
+  <picture>
+   <source srcset="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-1600.jpg" media="(min-width: 724px)" />
+   <img src="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-800.jpg" alt="Gorgeous landscape photo of a waterfall over a serene valley" />
+  </picture>
+  <figcaption>The lossy JPEG image format lends itself to photographic&nbsp;images</figcaption>
+</figure>
+
+## WebP 
+<figure>
+  <picture>
+   <source srcset="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-1600.webp" media="(min-width: 724px)" type="image/webp" />
+   <source srcset="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-800.webp" type="image/webp" />
+   <img src="/intro-web-architecture/assets/images/know-your-images/no-webp.svg" alt="Gorgeous landscape photo of a waterfall over a serene valley" />
+  </picture>
+  <figcaption>WebP is a new image format for the&nbsp;Web</figcaption>
+</figure>
+
+<blockquote cite="https://developers.google.com/speed/webp/">
+<p>WebP is a modern image format that provides superior lossless and lossy compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.</p>
+<p>WebP lossless images are 26% smaller in size compared to PNGs. WebP lossy images are 25-34% smaller than comparable JPEG images at equivalent SSIM quality index.</p>
+<p>Lossless WebP supports transparency (also known as alpha channel) at a cost of just 22% additional bytes. For cases when lossy RGB compression is acceptable, lossy WebP also supports transparency, typically providing 3× smaller file sizes compared to PNG.</p>
+&mdash;&emsp;<a class="very subtle" href="https://developers.google.com/speed/webp/">Google Developers</a>
+</blockquote>
+
+
+<details open>
+  <summary>
+    <h4>More info about GIFs</h4>
+  </summary>
+  <div>
+    <p>GIFs can be animated.</p>
+  </div>
+</details>
+
+
+
+## GIF 
+
+<blockquote class="legible">
+  <p>&#8220;It's pronounced &#8216;JIF&#8217;.&#8221;</p>
+  &mdash;&emsp;Jiffy the giraffe
+</blockquote>
+
+<figure>
+  <img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-16.gif" alt="Landscape photograph of a water rendered as a 32 color GIF&nbsp;image">
+  <figcaption>Supporting up to 256 colors the GIF format is designed for flat art and&nbsp;animation</figcaption>
+</figure>
+
+## PNG&ndash;8
+<figure>
+  <img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-8.png" alt="Landscape photograph of a water rendered as a 256 color PNG&ndash;8&nbsp;image">
+  <figcaption>Similar to GIFs, 8 bit PNGs can only contain up to 256&nbsp;colors</figcaption>
+</figure>
+
+
+## PNG&ndash;24
+<figure>
+  <img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-24.png" alt="Landscape photograph of a water rendered as a full color PNG&ndash;24&nbsp;image">
+  <figcaption>24 bit PNGs are lossy and full color. High quality and the largest file&nbsp;size</figcaption>
+</figure>
+
+## SVG 
+<figure>
+  <img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman.svg" alt="Landscape photograph of a water rendered as a full color PNG&ndash;24&nbsp;image">
+  <figcaption>Vector graphics do not consist of pixels and are therefore poor at rendering&nbsp;photographs</figcaption> 
+</figure>
+
+Scaleable Vector Graphics consist of mathematically defined shapes rather than pixels. This makes them resolution independent and ideal for graphics like logos and flat&nbsp;illustrations.

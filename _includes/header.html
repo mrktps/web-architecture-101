@@ -1,0 +1,28 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <h1>
+      <a class="site-title" href="{{ "/" | relative_url}}">
+        <svg class="icon" width="1em" height="1em">
+          <use xlink:href="{{ "/" | relative_url}}assets/images/icons/icons.svg#logo"></use>
+        </svg>
+        {{ site.title | escape }}
+      </a>
+    </h1>
+
+    <nav class="site-nav">
+      <div class="trigger">
+        {% for my_page in site.pages %}
+          {% unless my_page.exclude_from_nav %}
+            {% if my_page.title %}
+              <a class="page-link" href="{{ my_page.url | relative_url }}">{% if my_page.menutitle %} {{ my_page.menutitle | escape }} {% else %} {{ my_page.title | escape }} {% endif %}</a>
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </nav>
+
+  </div>
+
+</header>

@@ -8,66 +8,87 @@
 
   <title>🖼💡 Know Your Image Formats</title>
   
+  
+  
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="">
+  <meta name="description" content="Understanding various image formats enables us to get the most out of our images. With the correct formats and optimizations we can deliver higher quality im...">
 
   <link rel="stylesheet" href="/intro-web-architecture/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/intro-web-architecture/lessons/2.4.0-know-your-image-formats/">
+  <link rel="canonical" href="/intro-web-architecture/lessons/2.4.0-know-your-image-formats/">
   <link rel="alternate" type="application/rss+xml" title="Intro to Web Architecture" href="/intro-web-architecture/feed.xml">
   
   
   
-  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  </noscript>
   
   <style type="text/css" media="screen">
     body.white-on-black {
       --background-color: rgb(14,14,14);
       --text-color: white;
+      --manilla-text-color: rgb(245, 245, 245);
       --brand-color: rgb(210, 210, 210);
       --brand-color-dark: rgb(180, 180, 180);
       --site-title-color: rgb(220, 220, 220);
       --manilla: rgb(24,24,24);
+      --manilla-border-color: rgb(32,32,32);
     }
   </style>
 </head>
 
-  <body>
+  <body class="sticky">
 
     <header class="site-header" role="banner">
 
   <div class="wrapper">
 
-    <a class="site-title" href="/intro-web-architecture/">Intro to Web Architecture</a>
+    <h1>
+      <a class="site-title" href="/intro-web-architecture/">
+        <svg class="icon" width="1em" height="1em">
+          <use xlink:href="/intro-web-architecture/assets/images/icons/icons.svg#logo"></use>
+        </svg>
+        Intro to Web Architecture
+      </a>
+    </h1>
 
     <nav class="site-nav">
-      <span class="menu-icon">
-        <svg viewBox="0 0 18 15" width="18px" height="15px">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </span>
-
       <div class="trigger">
         
           
-          <a class="page-link" href="/intro-web-architecture/about/">About</a>
+            
+              <a class="page-link" href="/intro-web-architecture/about/"> About </a>
+            
           
         
           
-          <a class="page-link" href="/intro-web-architecture/humans">Humans</a>
+            
+              <a class="page-link" href="/intro-web-architecture/humans"> Humans </a>
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+              <a class="page-link" href="/intro-web-architecture/prefs/"> Preferences </a>
+            
           
         
           
         
           
-        
-          
-          <a class="page-link" href="/intro-web-architecture/source.html">Source Code</a>
+            
           
         
           
-        
+            
           
         
       </div>
@@ -76,7 +97,6 @@
   </div>
 
 </header>
-
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -103,8 +123,87 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    
+    <p>Understanding various image formats enables us to get the most out of our images. With the correct formats and optimizations we can deliver higher quality images with smaller file sizes.</p>
+<h2 id="jpeg">JPEG</h2>
+<figure>
+<picture> <source srcset="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-1600.jpg" media="(min-width: 724px)" /> <img src="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-800.jpg" alt="Gorgeous landscape photo of a waterfall over a serene valley" /> </picture>
+<figcaption>
+The lossy JPEG image format lends itself to photographic images
+</figcaption>
+</figure>
+<h2 id="webp">WebP</h2>
+<figure>
+<picture> <source srcset="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-1600.webp" media="(min-width: 724px)" type="image/webp" /> <source srcset="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-800.webp" type="image/webp" /> <img src="/intro-web-architecture/assets/images/know-your-images/no-webp.svg" alt="Gorgeous landscape photo of a waterfall over a serene valley" /> </picture>
+<figcaption>
+WebP is a new image format for the Web
+</figcaption>
+</figure>
+<blockquote cite="https://developers.google.com/speed/webp/">
+<p>
+WebP is a modern image format that provides superior lossless and lossy compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.
+</p>
+<p>
+WebP lossless images are 26% smaller in size compared to PNGs. WebP lossy images are 25-34% smaller than comparable JPEG images at equivalent SSIM quality index.
+</p>
+<p>
+Lossless WebP supports transparency (also known as alpha channel) at a cost of just 22% additional bytes. For cases when lossy RGB compression is acceptable, lossy WebP also supports transparency, typically providing 3× smaller file sizes compared to PNG.
+</p>
+— <a class="very subtle" href="https://developers.google.com/speed/webp/">Google Developers</a>
+</blockquote>
+<details open> <summary>
+<h4>
+More info about GIFs
+</h4>
+</summary>
+<div>
+<pre><code>&lt;p&gt;GIFs can be animated.&lt;/p&gt;</code></pre>
+</div>
+<p></details></p>
+<h2 id="gif">GIF</h2>
+<blockquote class="legible">
+<p>
+“It's pronounced ‘JIF’.”
+</p>
+— Jiffy the giraffe
+</blockquote>
+<figure>
+<img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-16.gif" alt="Landscape photograph of a water rendered as a 32 color GIF&nbsp;image">
+<figcaption>
+Supporting up to 256 colors the GIF format is designed for flat art and animation
+</figcaption>
+</figure>
+<h2 id="png8">PNG–8</h2>
+<figure>
+<img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-8.png" alt="Landscape photograph of a water rendered as a 256 color PNG&ndash;8&nbsp;image">
+<figcaption>
+Similar to GIFs, 8 bit PNGs can only contain up to 256 colors
+</figcaption>
+</figure>
+<h2 id="png24">PNG–24</h2>
+<figure>
+<img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-24.png" alt="Landscape photograph of a water rendered as a full color PNG&ndash;24&nbsp;image">
+<figcaption>
+24 bit PNGs are lossy and full color. High quality and the largest file size
+</figcaption>
+</figure>
+<h2 id="svg">SVG</h2>
+<figure>
+<img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman.svg" alt="Landscape photograph of a water rendered as a full color PNG&ndash;24&nbsp;image">
+<figcaption>
+Vector graphics do not consist of pixels and are therefore poor at rendering photographs
+</figcaption>
+</figure>
+<p>Scaleable Vector Graphics consist of mathematically defined shapes rather than pixels. This makes them resolution independent and ideal for graphics like logos and flat illustrations.</p>
 
+  </div>
+  
+  <div class="PageNavigation">
+    
+      <a class="prev" href="/intro-web-architecture/lessons/2.3.0-the-art-of-a-perfect-page-speed-score/">&laquo; The Art of a Perfect Page Speed Score 💯⚡️</a>
+    
+    
+      <a class="next" href="/intro-web-architecture/lessons/2.6.0-leveraging-the-browser-cache/">📑 Leveraging the Browser Cache &raquo;</a>
+    
   </div>
 
   
@@ -166,6 +265,39 @@
   </div>
   
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      const link = document.createElement('link');
+      link.setAttribute('href', 'https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300i,400,400i,500,500i,700,700i');
+      link.setAttribute('rel', 'stylesheet');
+      link.setAttribute('media', 'screen');
+      
+      document.querySelector('html > head').appendChild(link);
+      
+      document.body.classList.add('loaded');
+      
+      document.addEventListener("scroll", function(event) {
+        if(window.scrollY < 1) document.body.classList.add('sticky');
+      });
+      
+      window.addEventListener("hashchange", function() {        
+        document.body.classList.remove('sticky');
+        
+        recursivelyOpenClosestDetails(document.getElementById(location.hash.slice(1)));
+        
+        function recursivelyOpenClosestDetails(element) {
+          const closestDetails = element.parentElement.closest('details');
+          
+          try {
+            closestDetails.setAttribute('open', 'true');
+          } catch(e) { return false }
+          
+          recursivelyOpenClosestDetails(closestDetails);
+        }
+        
+      }, false);
+    });
+  </script>
 
 </footer>
 

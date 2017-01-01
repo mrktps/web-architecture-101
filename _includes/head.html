@@ -5,6 +5,8 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   
+  
+  
   <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
@@ -16,16 +18,20 @@
   {% include google-analytics.html %}
   {% endif %}
   
-  <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  </noscript>
   
   <style type="text/css" media="screen">
     body.white-on-black {
       --background-color: rgb(14,14,14);
       --text-color: white;
+      --manilla-text-color: rgb(245, 245, 245);
       --brand-color: rgb(210, 210, 210);
       --brand-color-dark: rgb(180, 180, 180);
       --site-title-color: rgb(220, 220, 220);
       --manilla: rgb(24,24,24);
+      --manilla-border-color: rgb(32,32,32);
     }
   </style>
 </head>

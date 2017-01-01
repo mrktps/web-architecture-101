@@ -1,0 +1,31 @@
+{
+  "name": "web-architecture-101",
+  "version": "0.0.0",
+  "description": "A series of lessons introducing you to fundamental principles and design patterns of Web Architecture. Brought to you by Markup Tips and Thinkful.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrktps/web-architecture-101.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrktps/web-architecture-101/issues"
+  },
+  "homepage": "https://github.com/mrktps/web-architecture-101#readme"
+}

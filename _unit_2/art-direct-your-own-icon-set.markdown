@@ -7,3 +7,5 @@ chapter: "2.5.0"
 githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_2/art-direct-your-own-icon-set.markdown
 ---
 
+## Related Resources 
+ - [Grunting Icons into SVG Sprites](https://markup.tips/projects/grunting-icons-into-svg-sprites.html#focus)

@@ -61,7 +61,7 @@ collections:
   unit_4:
     output: true
     permalink: /lessons/:path/
-    title: "Unit 4: Accessibility Rocks"
+    title: "Unit 4:🤘 Accessibility Rocks 🤘"
     
   unit_5:
     output: true
@@ -69,10 +69,32 @@ collections:
     title: "Unit 5: Beyond the Web Page"
 
 # Build settings
-markdown: kramdown
+markdown: Pandoc
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-pandoc
 exclude:
   - Gemfile
   - Gemfile.lock
+  
+pandoc:
+    skip: false
+    bundle_permalink: ':output_ext/:slug.:output_ext'
+    papersize: 'a5paper'
+    sheetsize: 'a4paper'
+    imposition: true
+    binder: true
+    covers_dir: assets/covers
+
+    flags: '--smart'
+    site_flags: '--toc'
+    outputs:
+      latex:
+      pdf: '--latex-engine=xelatex'
+      epub: '--epub-chapter-level=2'
+      
+
+  
+  
+  
