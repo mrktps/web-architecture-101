@@ -8,7 +8,7 @@ githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_0/t
 
 <blockquote class="balanced">
   <p><span class="legible">I've noticed the computer sometimes leads to rather bland decision-making;</span> Now, anybody can do a wobbly, blobby building.</p>
-  &mdash; Peter Cook
+  <cite>&mdash; Peter Cook</cite>
 </blockquote>
 
 

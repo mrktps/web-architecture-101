@@ -54,7 +54,6 @@ gulp.task('ebook-panda', function(cb) {
     exec(`pandoc --toc -S --epub-cover-image="assets/images/cover.png" --epub-stylesheet="assets/css/epub.css" --epub-embed-font="assets/font/Fira-*.ttf" -o intro-web-architecture.epub title.txt ${sources}`, function(err, stdout, stderr) {
       console.log(stdout);
       console.log(stderr);
-      
     });
   })
 });
@@ -79,16 +78,26 @@ function makeChange() {
     contents = contents.replace(/ *{%\scomment[^]*endcomment\s%}*/gi, '');
     contents = contents.replace(/{{\ssite.baseurl\s}}/g, '.');
     
+    // flatten <picture> to <img>
     contents = contents.replace(/<picture>[^]*<\/picture>/gi, function(picture) {
-      //return 'YOLO';
       try {
         return picture.match(/<img([\w\W]+?)\/>/i)[0];
       } catch (e) {
         return '';
       } 
     });
-    const frontMatter = Object.assign({}, {title:''}, file.frontMatter);
     
+    // flatten <details> to inner contents
+    contents = contents.replace(/<details[^]*<\/details>/gi, function(details) {
+      try {
+        return details.replace(/<summary[^]*<\/summary>/gi, '').replace(/<details[^\n]*/gi, '').replace(/<\/details>/gi, '').trim();
+      } catch (e) {
+        return '';
+      } 
+    });
+    
+    const frontMatter = Object.assign({}, {title:''}, file.frontMatter);
+    //<p class="chapter">Lesson ${frontMatter.chapter}</p>
     file.contents = new Buffer(`
 # ${frontMatter.title}
 

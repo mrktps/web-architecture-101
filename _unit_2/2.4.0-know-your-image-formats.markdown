@@ -37,13 +37,11 @@ Understanding various image formats enables us to get the most out of our images
 </blockquote>
 
 
-<details open>
+<details open="true">
   <summary>
     <h4>More info about GIFs</h4>
   </summary>
-  <div>
-    <p>GIFs can be animated.</p>
-  </div>
+  <p>GIFs can be animated.</p>
 </details>
 
 

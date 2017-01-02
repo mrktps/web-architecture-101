@@ -143,8 +143,24 @@ body {
   font-family:'Bookerly', 'Caecilia', serif;
 }
 
-pre, code {
+pre, code, .chapter {
   font-family:'Fira Mono', monospace;
+}
+
+blockquote {
+  font-style:italic;
+  font-weight:600;
+  font-family:'Fira Sans', sans-serif;
+}
+
+cite {
+  font-weight:300;
+}
+
+.chapter {
+  font-weight:200;
+  color:rgb(20,20,20);
+  font-size:.8em;
 }
 
 h1,h2,h3,h4,h5,h6 {
