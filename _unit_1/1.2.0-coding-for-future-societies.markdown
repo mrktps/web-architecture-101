@@ -10,7 +10,7 @@ githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_1/1
 <figure>
   <picture>
    <source srcset="{{ site.baseurl }}/assets/images/futuristic-building/futuristic-building-1600.jpg" media="(min-width: 724px)">
-   <img src="{{ site.baseurl }}/assets/images/futuristic-building/futuristic-building-800.jpg" alt="A profile shot of a futuristic building" width="1600" height="1067">
+   <img src="{{ site.baseurl }}/assets/images/futuristic-building/futuristic-building-800.jpg" alt="A profile shot of a futuristic building" />
   </picture>
   <figcaption>Futuristic architecture serves society at&nbsp;large</figcaption>  
 </figure>

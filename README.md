@@ -10,3 +10,7 @@ cd web-architecture-101/assets
 gem install neat #may need to use sudo 
 neat install
 ```
+
+```bash 
+pandoc -S -o intro-web-architecture.epub title.txt  _unit_0/epub__becoming-a-social-architect.markdown && say ebook generated && open intro-web-architecture.epub 
+```

@@ -19,7 +19,7 @@ Phillip demonstrates several practical use cases for CSS Variables such as [appl
 
 <figure>
   <a target="KdxmWL" href="http://codepen.io/philipwalton/pen/KdxmWL#code-area">
-    <img src="{{ site.baseurl }}/assets/images/cssvariables/custom-properties-contextual-styling-1400w.png" alt="One CSS Component with different styles based on the context of their location within the page">
+    <img src="{{ site.baseurl }}/assets/images/cssvariables/custom-properties-contextual-styling-1400w.png" alt="One CSS Component with different styles based on the context of their location within the page" />
   </a>
   <figcaption>Phillip's demo illustrates contextual styling of both links and buttons in the header of a site as well as the content&nbsp;area</figcaption>
 </figure>
@@ -34,9 +34,9 @@ CSS Variables save the day by allowing us to use dynamic variables as property v
 In this CodePen we add support for a simple high contrast theme without actually overriding any CSS&nbsp;properties:
 
 <p data-height="420" data-theme-id="0" data-slug-hash="jVgjpb" data-default-tab="css,result" data-user="jpdevries" data-embed-version="2" data-pen-title="High Contrast Theme with CSS Variables" class="codepen">See the Pen <a href="http://codepen.io/jpdevries/pen/jVgjpb/">High Contrast Theme with CSS Variables</a> by JP DeVries (<a href="http://codepen.io/jpdevries">@jpdevries</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-<br>We use a `body[data-theme="highcontrast"]` scope to override the default values of our theme&nbsp;variables. As `body[data-theme="highcontrast"]` is painted the cascade says &#8220;Well, I was going to use these default property values but since `body` has a `.highcontrast` class we'll use these other more specific ones instead&#8221;. Notice that all this happens without us having to explicitly set or override properties on&nbsp;`body[data-theme="highcontrast"]`.
+
+<br />We use a `body[data-theme="highcontrast"]` scope to override the default values of our theme&nbsp;variables. As `body[data-theme="highcontrast"]` is painted the cascade says &#8220;Well, I was going to use these default property values but since `body` has a `.highcontrast` class we'll use these other more specific ones instead&#8221;. Notice that all this happens without us having to explicitly set or override properties on&nbsp;`body[data-theme="highcontrast"]`.
 
 Let's break it down. First we set some CSS properties on the `body` to CSS Variables for background color, text color, and font family. Our variables have defaults so they have value even when not&nbsp;set.
 
@@ -68,10 +68,6 @@ body[data-theme="highcontrast"] {
 }
 ```
 
-{% comment %}
-{% include highlight.body.white-on-black.html %}
-{% endcomment %}
-
 So you might be thinking, what's the big deal? I can accomplish the same thing without CSS Variables. The advantages of cascading variables becomes more apparent as your style guide grows. In the above example we have three CSS Variables. Each of them is used once. Imagine if they were used more widely. Perhaps dozens of components make use of `--text-color` to set the size of their SVG&nbsp;icons. You set that one variable and whether it is used one time or a hundred times all references to it will&nbsp;respond.
 
 <section class="assignment">
@@ -85,7 +81,7 @@ So you might be thinking, what's the big deal? I can accomplish the same thing w
 Once your CodePen assignment is complete turn it in via Twitter. We can't wait to check it&nbsp;out.
 </p>
 <div>
-<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-mention-button twitter-mention-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.3748f7cda49448f6c6f7854238570ba0.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2F127.0.0.1%3A4000%2Fintro-web-architecture%2Flessons%2F4.2.0-powering-accessible-styles-with-CSS-variables%2F&amp;screen_name=mrktps&amp;size=l&amp;text=Just%20turned%20in%20my%20Intro%20to%20Web%20Architecture%20CSS%20Variables%20assignment!&amp;time=1483147102710&amp;type=mention" style="position: static; visibility: visible; width: 148px; height: 28px;" data-screen-name="mrktps"></iframe><script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-mention-button twitter-mention-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.3748f7cda49448f6c6f7854238570ba0.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2F127.0.0.1%3A4000%2Fintro-web-architecture%2Flessons%2F4.2.0-powering-accessible-styles-with-CSS-variables%2F&amp;screen_name=mrktps&amp;size=l&amp;text=Just%20turned%20in%20my%20Intro%20to%20Web%20Architecture%20CSS%20Variables%20assignment!&amp;time=1483147102710&amp;type=mention" style="position: static; visibility: visible; width: 148px; height: 28px;" data-screen-name="mrktps"></iframe>
 </div>
 </aside>
 
@@ -100,7 +96,7 @@ CSS Variables still need to sink in. Time for an assignment. Create a one page l
 Once your CodePen assignment is complete turn it in via Twitter. We can't wait to check it&nbsp;out.
 </p>
 <div>
-<a href="https://twitter.com/intent/tweet?screen_name=mrktps" class="twitter-mention-button" data-size="large" data-text="Just turned in my Intro to Web Architecture CSS Variables assignment!" data-show-count="false">Tweet to @mrktps</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/intent/tweet?screen_name=mrktps" class="twitter-mention-button" data-size="large" data-text="Just turned in my Intro to Web Architecture CSS Variables assignment!" data-show-count="false">Tweet to @mrktps</a>
 </div>
 </aside>
 {% endcomment %}
@@ -113,7 +109,7 @@ The ability to increase font size is an important accessibility consideration. U
 Here is a CodePen of the component we will be&nbsp;building:
 
 <p data-height="265" data-theme-id="0" data-slug-hash="ObKKyP" data-default-tab="css,result" data-user="jpdevries" data-embed-version="2" data-pen-title="Font Size Preference Widget" class="codepen">See the Pen <a href="http://codepen.io/jpdevries/pen/ObKKyP/">Font Size Preference Widget</a> by JP DeVries (<a href="http://codepen.io/jpdevries">@jpdevries</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 
 #### Source Code
 Familiarize yourself with the font size component source code below. We'll go over it in detail&nbsp;together.
@@ -126,7 +122,7 @@ Our HTML consists of a lightweight `form.widget`. The `.widget` class is used fo
 Our set of radio inputs is wrapped in a `<fieldset>` element. The `<fieldset>` element is used to semantically group elements together under a `<legend>` which describes them. Each option has a `input[type="radio"]` and a corresponding label to describe the&nbsp;input. The inputs are initially disabled because they cannot function without JavaScript. So we'll later use JavaScript to re-enable&nbsp;them.
 
 <figure>
-<img src="http://j4p.us/3Z0g0o363T2g/Screen%20Shot%202016-12-30%20at%207.52.30%20AM.png" alt="Responsive Font Size Component reads Please Enable JavaScript to Choose a Font Size when JavaScript is not enabled">
+<img src="http://j4p.us/3Z0g0o363T2g/Screen%20Shot%202016-12-30%20at%207.52.30%20AM.png" alt="Responsive Font Size Component reads Please Enable JavaScript to Choose a Font Size when JavaScript is not enabled" />
 <figcaption>When JavaScript is not available our component responds accordingly with disabled inputs and a please enable JavaScript&nbsp;message.</figcaption>
 </figure>
 

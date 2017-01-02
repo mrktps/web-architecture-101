@@ -7,7 +7,7 @@ githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_3/s
 ---
 
 <figure>
-  <img src="{{ site.baseurl }}/assets/images/misc/separation-of-concerns.png" alt="A pie chart with HTML, CSS, and JS as equal thirds">
+  <img src="{{ site.baseurl }}/assets/images/misc/separation-of-concerns.png" alt="A pie chart with HTML, CSS, and JS as equal thirds" />
   <figcaption>Front end web development consists of three main areas of&nbsp;concern</figcaption>
 </figure>
 

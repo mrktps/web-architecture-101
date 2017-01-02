@@ -8,8 +8,8 @@ githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_4/i
 
 <figure>
   <picture>
-   <source srcset="/intro-web-architecture/assets/images/landscape/tndvfkxkbho-igor-kasalovic-1600.jpg" media="(min-width: 724px)" />
-   <img src="/intro-web-architecture/assets/images/landscape/tndvfkxkbho-igor-kasalovic-800.jpg" alt="Colorful sunset at the beach" />
+   <source srcset="{{ site.baseurl }}/assets/images/landscape/tndvfkxkbho-igor-kasalovic-1600.jpg" media="(min-width: 724px)" />
+   <img src="{{ site.baseurl }}/assets/images/landscape/tndvfkxkbho-igor-kasalovic-800.jpg" alt="Colorful sunset at the beach" />
   </picture>
   <figcaption>An inclusive web has room for everyone</figcaption>
 </figure>
@@ -20,4 +20,4 @@ githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_4/i
 
 
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Reducing contrast on hover/focus is a popular design trend.<br><br>Don’t do it. They may be trying to read the element. Make it easier not harder.</p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/791618317828124673">October 27, 2016</a></blockquote> 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Reducing contrast on hover/focus is a popular design trend.<br /><br />Don’t do it. They may be trying to read the element. Make it easier not harder.</p>&mdash; Markup Tips (@mrktps) <a href="https://twitter.com/mrktps/status/791618317828124673">October 27, 2016</a></blockquote> 

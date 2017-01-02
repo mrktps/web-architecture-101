@@ -13,8 +13,8 @@ Understanding various image formats enables us to get the most out of our images
 ## JPEG
 <figure>
   <picture>
-   <source srcset="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-1600.jpg" media="(min-width: 724px)" />
-   <img src="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-800.jpg" alt="Gorgeous landscape photo of a waterfall over a serene valley" />
+   <source srcset="{{ site.baseurl }}/assets/images/landscape/znn6ubhmrui-robert-lukeman-1600.jpg" media="(min-width: 724px)" />
+   <img src="{{ site.baseurl }}/assets/images/landscape/znn6ubhmrui-robert-lukeman-800.jpg" alt="Gorgeous landscape photo of a waterfall over a serene valley" />
   </picture>
   <figcaption>The lossy JPEG image format lends itself to photographic&nbsp;images</figcaption>
 </figure>
@@ -22,9 +22,9 @@ Understanding various image formats enables us to get the most out of our images
 ## WebP 
 <figure>
   <picture>
-   <source srcset="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-1600.webp" media="(min-width: 724px)" type="image/webp" />
-   <source srcset="/intro-web-architecture/assets/images/landscape/znn6ubhmrui-robert-lukeman-800.webp" type="image/webp" />
-   <img src="/intro-web-architecture/assets/images/know-your-images/no-webp.svg" alt="Gorgeous landscape photo of a waterfall over a serene valley" />
+   <source srcset="{{ site.baseurl }}/assets/images/landscape/znn6ubhmrui-robert-lukeman-1600.webp" media="(min-width: 724px)" type="image/webp" />
+   <source srcset="{{ site.baseurl }}/assets/images/landscape/znn6ubhmrui-robert-lukeman-800.webp" type="image/webp" />
+   <img src="{{ site.baseurl }}/assets/images/know-your-images/no-webp.svg" alt="Gorgeous landscape photo of a waterfall over a serene valley" />
   </picture>
   <figcaption>WebP is a new image format for the&nbsp;Web</figcaption>
 </figure>
@@ -56,26 +56,26 @@ Understanding various image formats enables us to get the most out of our images
 </blockquote>
 
 <figure>
-  <img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-16.gif" alt="Landscape photograph of a water rendered as a 32 color GIF&nbsp;image">
+  <img src="{{ site.baseurl }}/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-16.gif" alt="Landscape photograph of a water rendered as a 32 color GIF&nbsp;image" />
   <figcaption>Supporting up to 256 colors the GIF format is designed for flat art and&nbsp;animation</figcaption>
 </figure>
 
 ## PNG&ndash;8
 <figure>
-  <img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-8.png" alt="Landscape photograph of a water rendered as a 256 color PNG&ndash;8&nbsp;image">
+  <img src="{{ site.baseurl }}/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-8.png" alt="Landscape photograph of a water rendered as a 256 color PNG&ndash;8&nbsp;image" />
   <figcaption>Similar to GIFs, 8 bit PNGs can only contain up to 256&nbsp;colors</figcaption>
 </figure>
 
 
 ## PNG&ndash;24
 <figure>
-  <img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-24.png" alt="Landscape photograph of a water rendered as a full color PNG&ndash;24&nbsp;image">
+  <img src="{{ site.baseurl }}/assets/images/know-your-images/znn6ubhmrui-robert-lukeman-24.png" alt="Landscape photograph of a water rendered as a full color PNG&ndash;24&nbsp;image" />
   <figcaption>24 bit PNGs are lossy and full color. High quality and the largest file&nbsp;size</figcaption>
 </figure>
 
 ## SVG 
 <figure>
-  <img src="/intro-web-architecture/assets/images/know-your-images/znn6ubhmrui-robert-lukeman.svg" alt="Landscape photograph of a water rendered as a full color PNG&ndash;24&nbsp;image">
+  <img src="{{ site.baseurl }}/assets/images/know-your-images/znn6ubhmrui-robert-lukeman.svg" alt="Landscape photograph of a water rendered as a full color PNG&ndash;24&nbsp;image" />
   <figcaption>Vector graphics do not consist of pixels and are therefore poor at rendering&nbsp;photographs</figcaption> 
 </figure>
 

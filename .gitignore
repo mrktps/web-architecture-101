@@ -4,3 +4,5 @@ bower_components
 assets/neat
 
 _site.zip
+
+*.epub

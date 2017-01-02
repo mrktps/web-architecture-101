@@ -8,7 +8,7 @@ githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_0/b
 <figure>
   <picture>
    <source srcset="{{ site.baseurl }}/assets/images/architecture/architecture-1600.jpg" media="(min-width: 724px)" />
-   <img src="{{ site.baseurl }}/assets/images/architecture/architecture-800.jpg" alt="Modern architecture">
+   <img src="{{ site.baseurl }}/assets/images/architecture/architecture-800.jpg" alt="Modern architecture" />
   </picture>
   <figcaption>Art critiques society; design serves society from&nbsp;within</figcaption>
 </figure>
@@ -40,7 +40,7 @@ Architects bare the responsibility of designing for the public using inclusive d
 </blockquote>
 
 <figure>
-  <img src="{{ site.baseurl }}/assets/images/sketch/developer_empathy.svg" alt="" style="max-height:80vh;min-height:480px;border:none">
+  <img src="{{ site.baseurl }}/assets/images/sketch/developer_empathy.svg" alt="Developer Empathy" style="max-height:80vh;min-height:480px;border:none" />
   <figcaption>As an architect you manifest shelter but at the end of the job it is the occupants who must live with&nbsp;it.</figcaption>
 </figure>
 
