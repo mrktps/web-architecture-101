@@ -1,8 +1,6 @@
 ---
-title: Intro to Web Architecture
+title: An Introduction to Web Architecture
 author: JP de Vries
 rights:  Creative Commons Non-Commercial Share Alike 3.0
 language: en-US
 ---
-
-pandoc -S -o intro-web-architecture.epub title.txt  _unit_0/epub__becoming-a-social-architect.markdown && say ebook generated && open intro-web-architecture.epub 

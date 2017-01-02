@@ -51,7 +51,7 @@ gulp.task('ebook-panda', function(cb) {
     let sources = filenames.get("panda").sort().map((file) => (
       `./tmp/${file}`
     )).join(' ');
-    exec(`pandoc --toc -S --epub-cover-image="assets/images/cover.png" -o intro-web-architecture.epub title.txt ${sources}`, function(err, stdout, stderr) {
+    exec(`pandoc --toc -S --epub-cover-image="assets/images/cover.png" --epub-stylesheet="assets/css/epub.css" --epub-embed-font="assets/font/Fira-*.ttf" -o intro-web-architecture.epub title.txt ${sources}`, function(err, stdout, stderr) {
       console.log(stdout);
       console.log(stderr);
       
