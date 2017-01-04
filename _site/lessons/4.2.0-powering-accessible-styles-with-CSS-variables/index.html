@@ -85,6 +85,12 @@
         
           
             
+              <a class="page-link" href="/intro-web-architecture/title.txt"> An Introduction to Web Architecture </a>
+            
+          
+        
+          
+            
           
         
           
@@ -131,7 +137,7 @@
 </ul>
 <p>Phillip demonstrates several practical use cases for CSS Variables such as <a href="http://codepen.io/philipwalton/pen/KdxmWL#code-area">applying different style to different components without having to override selectors</a>. Using a similar concept, we can architect the components of our page to <strong>respond to any given user's accessibility preferences</strong>.</p>
 <figure>
-<a target="KdxmWL" href="http://codepen.io/philipwalton/pen/KdxmWL#code-area"> <img src="/intro-web-architecture/assets/images/cssvariables/custom-properties-contextual-styling-1400w.png" alt="One CSS Component with different styles based on the context of their location within the page"> </a>
+<a target="KdxmWL" href="http://codepen.io/philipwalton/pen/KdxmWL#code-area"> <img src="/intro-web-architecture/assets/images/cssvariables/custom-properties-contextual-styling-1400w.png" alt="One CSS Component with different styles based on the context of their location within the page" /> </a>
 <figcaption>
 Phillip's demo illustrates contextual styling of both links and buttons in the header of a site as well as the content area
 </figcaption>
@@ -144,8 +150,7 @@ Phillip's demo illustrates contextual styling of both links and buttons in the h
 <p data-height="420" data-theme-id="0" data-slug-hash="jVgjpb" data-default-tab="css,result" data-user="jpdevries" data-embed-version="2" data-pen-title="High Contrast Theme with CSS Variables" class="codepen">
 See the Pen <a href="http://codepen.io/jpdevries/pen/jVgjpb/">High Contrast Theme with CSS Variables</a> by JP DeVries (<a href="http://codepen.io/jpdevries"><span class="citation" data-cites="jpdevries">@jpdevries</span></a>) on <a href="http://codepen.io">CodePen</a>.
 </p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-<p><br>We use a <code>body[data-theme=&quot;highcontrast&quot;]</code> scope to override the default values of our theme variables. As <code>body[data-theme=&quot;highcontrast&quot;]</code> is painted the cascade says “Well, I was going to use these default property values but since <code>body</code> has a <code>.highcontrast</code> class we'll use these other more specific ones instead”. Notice that all this happens without us having to explicitly set or override properties on <code>body[data-theme=&quot;highcontrast&quot;]</code>.</p>
+<p><br />We use a <code>body[data-theme=&quot;highcontrast&quot;]</code> scope to override the default values of our theme variables. As <code>body[data-theme=&quot;highcontrast&quot;]</code> is painted the cascade says “Well, I was going to use these default property values but since <code>body</code> has a <code>.highcontrast</code> class we'll use these other more specific ones instead”. Notice that all this happens without us having to explicitly set or override properties on <code>body[data-theme=&quot;highcontrast&quot;]</code>.</p>
 <p>Let's break it down. First we set some CSS properties on the <code>body</code> to CSS Variables for background color, text color, and font family. Our variables have defaults so they have value even when not set.</p>
 <div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">body <span class="kw">{</span>
   <span class="kw">background:</span> var(--background-color, <span class="dt">white</span>)<span class="kw">;</span>
@@ -183,7 +188,6 @@ Once your CodePen assignment is complete turn it in via Twitter. We can't wait t
 <div>
 <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-mention-button twitter-mention-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.3748f7cda49448f6c6f7854238570ba0.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2F127.0.0.1%3A4000%2Fintro-web-architecture%2Flessons%2F4.2.0-powering-accessible-styles-with-CSS-variables%2F&amp;screen_name=mrktps&amp;size=l&amp;text=Just%20turned%20in%20my%20Intro%20to%20Web%20Architecture%20CSS%20Variables%20assignment!&amp;time=1483147102710&amp;type=mention" style="position: static; visibility: visible; width: 148px; height: 28px;" data-screen-name="mrktps">
 </iframe>
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </aside>
 <h2 id="responsive-font-size-component">Responsive Font Size Component</h2>
@@ -192,7 +196,6 @@ Once your CodePen assignment is complete turn it in via Twitter. We can't wait t
 <p data-height="265" data-theme-id="0" data-slug-hash="ObKKyP" data-default-tab="css,result" data-user="jpdevries" data-embed-version="2" data-pen-title="Font Size Preference Widget" class="codepen">
 See the Pen <a href="http://codepen.io/jpdevries/pen/ObKKyP/">Font Size Preference Widget</a> by JP DeVries (<a href="http://codepen.io/jpdevries"><span class="citation" data-cites="jpdevries">@jpdevries</span></a>) on <a href="http://codepen.io">CodePen</a>.
 </p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 <h4 id="source-code">Source Code</h4>
 <p>Familiarize yourself with the font size component source code below. We'll go over it in detail together.</p>
 <h4 id="progressively-enhanced-html">Progressively Enhanced HTML</h4>
@@ -200,7 +203,7 @@ See the Pen <a href="http://codepen.io/jpdevries/pen/ObKKyP/">Font Size Preferen
 <p>Our HTML consists of a lightweight <code>form.widget</code>. The <code>.widget</code> class is used for layout styling to center the widget and keep it from growing too wide. A <code>h2</code> heading describes the component. But that's not all. There are two clever things going on with our heading. Firstly, we've given it an <code>id=&quot;font-size&quot;</code> attribute. No big deal. But why? This allows that component to be targeted using the URL hash location. If we have a font size component half way down our <code>mypage.html</code> linking to <code>mypage.html#font-size</code> will scroll the visitor down the page directly to our component. We are also using a <code>&lt;noscript&gt;</code> element for a message to enable JavaScript within our heading. This inline <code>&lt;noscript&gt;</code> element will be entirely ignored by script enabled browsers.</p>
 <p>Our set of radio inputs is wrapped in a <code>&lt;fieldset&gt;</code> element. The <code>&lt;fieldset&gt;</code> element is used to semantically group elements together under a <code>&lt;legend&gt;</code> which describes them. Each option has a <code>input[type=&quot;radio&quot;]</code> and a corresponding label to describe the input. The inputs are initially disabled because they cannot function without JavaScript. So we'll later use JavaScript to re-enable them.</p>
 <figure>
-<img src="http://j4p.us/3Z0g0o363T2g/Screen%20Shot%202016-12-30%20at%207.52.30%20AM.png" alt="Responsive Font Size Component reads Please Enable JavaScript to Choose a Font Size when JavaScript is not enabled">
+<img src="http://j4p.us/3Z0g0o363T2g/Screen%20Shot%202016-12-30%20at%207.52.30%20AM.png" alt="Responsive Font Size Component reads Please Enable JavaScript to Choose a Font Size when JavaScript is not enabled" />
 <figcaption>
 When JavaScript is not available our component responds accordingly with disabled inputs and a please enable JavaScript message.
 </figcaption>
@@ -293,6 +296,8 @@ Perhaps if inclusive design and <a href="https://twitter.com/hashtag/a11y?src=ha
   </div>
   
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+  
   <script>
     document.addEventListener("DOMContentLoaded", function(event) {
       const link = document.createElement('link');

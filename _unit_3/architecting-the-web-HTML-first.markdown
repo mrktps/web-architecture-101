@@ -16,3 +16,7 @@ githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_3/a
 
 <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Use semantic HTML elements. If you can&#39;t, use ARIA rules. CSS classes are for developers, not readers.<a href="https://twitter.com/robinwhittleton">@robinwhittleton</a> at <a href="https://twitter.com/hashtag/fen16?src=hash">#fen16</a></p>&mdash; laura kishimoto (@chicgeek) <a href="https://twitter.com/chicgeek/status/781814527797129217">September 30, 2016</a></blockquote> 
 
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">Designing future forward isn’t just about code that works better tomorrow. <br /><br />It’s about supporting accessibility of aging users too. <br />♿️ 🚀</p>
+<p lang="en" dir="ltr">Ask yourself, “Is this interface usable to your 20yr old target audience in 60 years?“<br />🎯 📆</p>&mdash; JP de Vries (@jpdevries) <a href="https://twitter.com/jpdevries/status/816739374926680064">January 4, 2017</a></blockquote>
+

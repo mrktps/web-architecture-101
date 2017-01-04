@@ -10,3 +10,9 @@ cd web-architecture-101/assets
 gem install neat #may need to use sudo 
 neat install
 ```
+
+```bash 
+cd _build
+yarn # just the once 
+gulp ebook && say ebook generated && open ../intro-web-architecture.epub
+```

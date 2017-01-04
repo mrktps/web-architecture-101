@@ -6,19 +6,21 @@ frontMatter = require('gulp-front-matter'),
 filenames = require("gulp-filenames"),
 exec = require('child_process').exec;
 
+const basepath = '../';
+
 
 gulp.task('icons', function () {
-  return gulp.src('./assets/images/icons/src/*')
+  return gulp.src(`${basepath}assets/images/icons/src/*`)
     .pipe(svgmin())
     .pipe(svgstore({ inlineSvg: true, prefix: 'icon-'}))
     .pipe(rename('icons.svg'))
-    .pipe(gulp.dest('./assets/images/icons/'));
+    .pipe(gulp.dest(`${basepath}assets/images/icons/`));
 });
 
 
 
 gulp.task('ebook-prep-copy', function() {
-  return gulp.src(['_unit_*/**/*']).pipe(gulp.dest('./tmp'))
+  return gulp.src([`${basepath}_unit_*/**/*`]).pipe(gulp.dest('./tmp'))
 })
 
 gulp.task('ebook-prep', function() {
@@ -51,7 +53,7 @@ gulp.task('ebook-panda', function(cb) {
     let sources = filenames.get("panda").sort().map((file) => (
       `./tmp/${file}`
     )).join(' ');
-    exec(`pandoc --toc -S --epub-cover-image="assets/images/cover.png" --epub-stylesheet="assets/css/epub.css" --epub-embed-font="assets/font/Fira-*.ttf" -o intro-web-architecture.epub title.txt ${sources}`, function(err, stdout, stderr) {
+    exec(`pandoc --toc -S --epub-cover-image="${basepath}assets/images/cover.png" --epub-stylesheet="${basepath}assets/css/epub.css" --epub-embed-font="${basepath}assets/font/Fira-*.ttf" -o ${basepath}intro-web-architecture.epub ${basepath}title.txt ${sources}`, function(err, stdout, stderr) {
       console.log(stdout);
       console.log(stderr);
     });
@@ -86,6 +88,8 @@ function makeChange() {
         return '';
       } 
     });
+    
+    contents = contents.replace('<br>','<br />');
     
     // flatten <details> to inner contents
     contents = contents.replace(/<details[^]*<\/details>/gi, function(details) {

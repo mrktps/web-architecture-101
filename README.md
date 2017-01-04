@@ -12,9 +12,7 @@ neat install
 ```
 
 ```bash 
-pandoc -S -o intro-web-architecture.epub title.txt  _unit_0/epub__becoming-a-social-architect.markdown && say ebook generated && open intro-web-architecture.epub 
-```
-
-```bash 
-gulp ebook && say ebook generated && open intro-web-architecture.epub
+cd _build
+yarn # just the once 
+gulp ebook && say ebook generated && open ../intro-web-architecture.epub
 ```
