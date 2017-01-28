@@ -20,11 +20,11 @@ gulp.task('icons', function () {
 
 
 gulp.task('ebook-prep-copy', function() {
-  return gulp.src([`${basepath}_unit_*/**/*`]).pipe(gulp.dest('./tmp'))
+  return gulp.src([`${basepath}_unit_*/**/*`]).pipe(gulp.dest(`${basepath}_tmp`))
 })
 
 gulp.task('ebook-prep', function() {
-  return gulp.src('./tmp/_unit_*/*.markdown')
+  return gulp.src(`${basepath}_tmp/_unit_*/*.markdown`)
   .pipe(frontMatter({
     property: 'frontMatter',
     remove: true
@@ -34,7 +34,7 @@ gulp.task('ebook-prep', function() {
 });
 
 gulp.task('ebook', function(cb) {
-  exec('gulp ebook-prep-copy && gulp ebook-prep && gulp ebook-panda && rm -rf ./tmp', function(err, stdout, stderr) {
+  exec(`gulp ebook-prep-copy && gulp ebook-prep && gulp ebook-panda && rm -rf ${basepath}_tmp`, function(err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     cb(err);
@@ -42,18 +42,18 @@ gulp.task('ebook', function(cb) {
 });
 
 /*
-pandoc -S -o intro-web-architecture.epub title.txt  tmp/_unit_0/becoming-a-social-architect.markdown && say ebook generated && open intro-web-architecture.epub 
+pandoc -S -o intro-web-architecture.epub title.txt  _tmp/_unit_0/becoming-a-social-architect.markdown && say ebook generated && open intro-web-architecture.epub 
 pandoc -S -o intro-web-architecture.epub title.txt    && say ebook generated && open intro-web-architecture.epub 
 */
 
 gulp.task('ebook-panda', function(cb) {
-  return gulp.src('_unit_*/*')
+  return gulp.src(`${basepath}_unit_*/*`)
   .pipe(filenames("panda"))
   .on('end', function() {
     let sources = filenames.get("panda").sort().map((file) => (
-      `./tmp/${file}`
+      `./_tmp/${file}`
     )).join(' ');
-    exec(`pandoc --toc -S --epub-cover-image="${basepath}assets/images/cover.png" --epub-stylesheet="${basepath}assets/css/epub.css" --epub-embed-font="${basepath}assets/font/Fira-*.ttf" -o ${basepath}intro-web-architecture.epub ${basepath}title.txt ${sources}`, function(err, stdout, stderr) {
+    exec(`cd ${basepath} && pandoc --toc -S --epub-cover-image="assets/images/cover.png" --epub-stylesheet="assets/css/epub.css" --epub-embed-font="assets/font/Fira*.ttf" -o intro-web-architecture.epub title.txt ${sources}`, function(err, stdout, stderr) {
       console.log(stdout);
       console.log(stderr);
     });
@@ -81,7 +81,7 @@ function makeChange() {
     contents = contents.replace(/{{\ssite.baseurl\s}}/g, '.');
     
     // flatten <picture> to <img>
-    contents = contents.replace(/<picture>[^]*<\/picture>/gi, function(picture) {
+    contents = contents.replace(/<picture>[^]*?<\/picture>/gi, function(picture) {
       try {
         return picture.match(/<img([\w\W]+?)\/>/i)[0];
       } catch (e) {
@@ -106,6 +106,7 @@ function makeChange() {
 # ${frontMatter.title}
 
 ${contents}
+
 `);
 
     // if there was some error, just pass as the first parameter here

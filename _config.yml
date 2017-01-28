@@ -77,6 +77,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - _build
+  - _tmp
   
 pandoc:
     skip: false

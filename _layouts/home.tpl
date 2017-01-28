@@ -25,7 +25,7 @@ layout: default
               <li id="l{{ post.chapter }}">
                 <span class="post-meta"><span class="">Lesson </span>{{ post.chapter}}</span>
                 <h3>
-                  <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                  <a class="post-link" href="{{ post.url | relative_url }}" {% if post.title_append %}data-emoji-append="{{ post.title_append }}" {% endif %}{% if post.title_prepend %}data-emoji-prepend="{{ post.title_prepend }}" {% endif %}>{{ post.title | escape }}</a>
                 </h3>
               </li>
             {% endfor %}

@@ -6,3 +6,5 @@ assets/neat
 _site.zip
 
 *.epub
+
+_tmp
