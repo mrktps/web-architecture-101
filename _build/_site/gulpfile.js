@@ -4,8 +4,7 @@ svgmin = require('gulp-svgmin'),
 rename = require('gulp-rename'),
 frontMatter = require('gulp-front-matter'),
 filenames = require("gulp-filenames"),
-exec = require('child_process').exec,
-shell = require('gulp-shell');
+exec = require('child_process').exec;
 
 const basepath = '../';
 
@@ -40,15 +39,6 @@ gulp.task('ebook', function(cb) {
     console.log(stderr);
     cb(err);
   })
-});
-
-gulp.task('jekyll', function(cb) {
-  console.log('run this command in another terminal window:');
-  const doProd = process.argv.includes('--prod') ? ' --config _config.yml,_configprod.yml' : '';
-  exec('cd ../ && pwd', function(err, stdout, stderr) {
-    console.log(`cd ${stdout.trim()} && bundle exec jekyll serve${doProd}`);
-    cb(err);
-  });
 });
 
 /*
