@@ -51,6 +51,19 @@ gulp.task('jekyll', function(cb) {
   });
 });
 
+gulp.task('deploy', function(cb) {
+  console.log(`
+# run this on the production server
+cd /home/markuptips/sub/courses.markup.tips
+ls
+unzip _site.zip
+rm -rf intro-web-architecture/* && mv _site/* intro-web-architecture/
+rm -rf _site && rm -rf _site.zip 
+    
+`);
+  cb();
+});
+
 /*
 pandoc -S -o intro-web-architecture.epub title.txt  _tmp/_unit_0/becoming-a-social-architect.markdown && say ebook generated && open intro-web-architecture.epub 
 pandoc -S -o intro-web-architecture.epub title.txt    && say ebook generated && open intro-web-architecture.epub 
