@@ -1,0 +1,17 @@
+---
+layout: lesson
+title:  "Turn Off Your Computer 🔌"
+categories: design process  
+chapter: "0.2.0"
+menuindex: 2
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_0/turn-off-your-computer.markdown
+---
+
+It's 2009 and I'm teaching a Game Programming class at the Art Institute of Portland. Even with four hour session there simply isn't enough time for me to meet with each of the thirty students each week to help them get unstuck. On the spot, I make something up. “OK everyone. This week I want you to go home and turn off your computer. Work it out on paper. If you're still stuck, let me know.” As I checked my emails that week I expected a bombardment of emails from stuck students. I didn't receive any emails that week. Assuming my students must of turned off the computer and turned on the video game console, I went to class frustrated the next week.
+
+<blockquote class="balanced">
+  <p><span class="legible">I've noticed the computer sometimes leads to rather bland decision-making;</span> Now, anybody can do a wobbly, blobby building.</p>
+  <cite>&mdash; Peter Cook</cite>
+</blockquote>
+
+

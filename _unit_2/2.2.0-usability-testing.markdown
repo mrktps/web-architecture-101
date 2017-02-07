@@ -4,6 +4,7 @@ title:  "Usability Testing 🖱⌨️"
 date:   2016-12-28 10:37:34 -0800
 categories: usability testing
 chapter: "2.2.0"
+menuindex: 0
 githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_2/2.2.0-usability-testing.markdown
 ---
 

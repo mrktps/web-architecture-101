@@ -3,4 +3,5 @@ title: An Introduction to Web Architecture
 author: JP de Vries
 rights:  Creative Commons Non-Commercial Share Alike 3.0
 language: en-US
+exclude_from_nav: true
 ---

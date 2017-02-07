@@ -14,9 +14,9 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      darken(#2a7ae2, 10%);
 
-$grey-color:       #828282;
+$grey-color:       darken(#828282, 10%);
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
@@ -30,6 +30,7 @@ $black: rgb(8,8,8);
 $white: white;
 
 $manilla:          rgb(255,255,200);
+$topMost:          99999;
 
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
@@ -61,6 +62,10 @@ body {
   background-color: var(--background-color);
 }
 
+#toggle-toc0 {
+  margin-top:1em;
+}
+
 .site-header, .site-footer {
   transition: all 420ms ease;
   &.heavy, &:hover {
@@ -86,6 +91,18 @@ body {
   }
 }
 
+.visually-hidden { /*https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html*/
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+} 
+body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .visually-hidden button { display: none !important; } 
+
 .footer-heading {
   
   
@@ -97,7 +114,7 @@ body {
   font-style:italic;
   font-size:2rem;
   line-height:1;
-  margin-top:.5rem;
+  margin-top:1rem;
   
   @include media(min-width 601px) {
     .icon {
@@ -136,6 +153,86 @@ aside.subtle {
   }
 }
 
+.grid {
+  nav.sidenav {
+    p {
+      margin:0;
+    }
+    #toc_ {
+      padding:0 0.5rem;
+      text-align:center;
+    }
+    display:none;
+    &[aria-hidden="false"] {
+      display:block;
+    }
+    padding:1em 0;
+    summary {
+      padding:0 .5rem;
+    }
+  }
+  &.toc-shown {
+    nav.sidenav {
+      //display:block;
+    }
+    @include media(min-width 641px) {
+      display: grid;
+      grid-gap: 0;
+      max-height:100vh;
+      overflow-y: hidden;
+      grid-template-columns: 25vw 75vw;
+      grid-template-areas: "header header" "sidebar content"; // "footer footer"
+      grid-template-rows: auto calc(100vh - 116px);
+      main.wrapper {
+        margin-left:0;
+      }
+      header {
+        grid-area: header;
+      }
+      nav.sidenav { 
+        grid-area: sidebar;
+        overflow-y:auto;
+        
+        font-size:1rem;
+        
+        
+        
+        border-right:1px solid rgb(120,120,120);
+        
+        h2,h3,h4 {
+          font-size:1rem;
+        }
+        
+        .post-link {
+          font-size:1em;
+        }
+      }
+      .default.page-content {
+        grid-area: content;
+        overflow-y:auto;
+      }
+      .site-footer {
+        //grid-area: footer;
+      }
+    }  
+  }
+}
+
+/*.page-content {
+  &.default {
+    height:100
+    @include media(min-width 641px) {
+      display:flex;
+      > nav {
+        order:0;
+      }
+      > main {
+        order:1;
+      }  
+    }
+  }
+}*/
+
 .assignment {
   background:var(--manilla, $manilla);
   padding:1.5em;
@@ -171,8 +268,13 @@ blockquote .legible {
 .subtle {
   color:currentColor;
   &.very {
-    &:hover, &:visited {
+    &:visited {
       color:currentColor;
+    }
+    &:hover {
+      @media (pointer: fine) {
+        color:currentColor;
+      }
     }
   }
 }
@@ -192,6 +294,7 @@ blockquote .legible {
 }
 
 .site-header {
+  z-index:$topMost;
   border-top:2px solid #424242;
   border-bottom:2px solid #424242;
   border-color: var(--text-color);
@@ -255,7 +358,9 @@ a {
   }
 
   &:hover {
-    color: var(--text-color);
+    @media (pointer: fine) {
+      color: var(--text-color);
+    }
   }
 }
 
@@ -273,7 +378,7 @@ code, pre, .mono {
 .post-list {
   li {
     padding:.5em;
-    &:target {
+    &:target, &.active {
       background:$manilla;
       background:var(--manilla);
       outline:2px solid $brand-color;
@@ -373,6 +478,26 @@ iframe[id*="twitter-widget"] {
   @include outer-container;
 }
 
+.container {
+  @include outer-container;
+}
+
+#toggle-toc {
+  margin-top:1em;
+}
+
 body.loaded {
   font-family: 'Fira Sans', sans-serif;
+}
+
+.post-link {
+  font-size:1.5em;
+}
+
+.page-content {
+  padding-bottom:0;
+}
+
+main.wrapper {
+  padding-bottom:30px;
 }

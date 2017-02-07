@@ -4,6 +4,7 @@ title:  "⚡️ Weathering the Storms of a Web Unknown ⁉️"
 date:   2016-12-20 10:37:34 -0800
 categories: 1.1 performance
 chapter: "1.3.0"
+menuindex: 2
 githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_1/1.3.0-weather-the-storms-of-a-web-unkown.markdown
 ---
 

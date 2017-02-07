@@ -3,17 +3,45 @@
 
   {% include head.html %}
 
-  <body class="sticky">
+  <body class="sticky grid">
 
     {% include header.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+    {% if page.layout == 'lesson' %}
+    <nav id="sidenav" class="sidenav" aria-hidden="true" aria-labelledby="toc_">
+      <h2 id="toc_">Table of Contents</h2>
+      {% for collection in site.collections | sort: 'title' %}
+        {% if collection.title != null %}
+          <details open>
+            <summary>
+              {{ collection.title }}
+            </summary>
+            {% assign sortedPosts = collection.docs | sort: 'menuindex' %}
+            <ul class="post-list">
+              {% for post in sortedPosts | sort: 'title' %}
+                <li id="toc{{ post.chapter }}" {% if post.chapter == page.chapter %}class="active"{% endif %}>
+                  <span class="post-meta" aria-hidden="true"><a href="{{ post.url | relative_url }}" class="very subtle">Lesson {{ post.chapter}}</a></span> 
+                  <p>
+                    <a class="post-link" href="{{ post.url | relative_url }}" {% if post.title_append %}data-emoji-append="{{ post.title_append }}" {% endif %}{% if post.title_prepend %}data-emoji-prepend="{{ post.title_prepend }}" {% endif %} aria-label="Lesson {{ post.chapter}} {{ post.title | escape }}">{{ post.title | escape }}</a>
+                  </p>
+                </li>
+              {% endfor %}
+            </ul>
+          </details>
+        {% endif %}
+      {% endfor %}
+    </nav>
+    {% endif %}
 
-    {% include footer.html %}
+    <div class="default page-content">
+      <main class="wrapper">
+        {{ content }}
+      </main>
+      {% include footer.html %}
+    </div>
+    
+
+    
 
   </body>
 

@@ -44,9 +44,9 @@ gulp.task('ebook', function(cb) {
 
 gulp.task('jekyll', function(cb) {
   console.log('run this command in another terminal window:');
-  const doProd = process.argv.includes('--prod') ? ' --config _config.yml,_configprod.yml' : '';
+  let opts = process.argv.includes('--prod') ? ' --config _config.yml,_configprod.yml' : '--livereload';
   exec('cd ../ && pwd', function(err, stdout, stderr) {
-    console.log(`cd ${stdout.trim()} && bundle exec jekyll serve${doProd}`);
+    console.log(`cd ${stdout.trim()} && bundle exec jekyll serve${opts}`);
     cb(err);
   });
 });
@@ -59,7 +59,8 @@ ls
 unzip _site.zip
 rm -rf intro-web-architecture/* && mv _site/* intro-web-architecture/
 rm -rf _site && rm -rf _site.zip 
-    
+find -type f ! -perm 644 -exec chmod 0644 {} /\; && find -type d ! -perm 755 -exec chmod 0755 {} /\;
+
 `);
   cb();
 });

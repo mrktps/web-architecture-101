@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "neat": "^1.8.0"
+    "neat": "^1.8.0",
+    "a11y-toggle": "^2.0.3"
   }
 }

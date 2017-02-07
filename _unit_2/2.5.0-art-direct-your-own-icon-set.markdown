@@ -1,0 +1,12 @@
+---
+layout: lesson
+title:  "Art Direct Your Own Icon Set 👩‍🎨"
+date:   2016-12-28 10:37:34 -0800
+categories: production
+chapter: "2.5.0"
+menuindex: 3
+githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_2/art-direct-your-own-icon-set.markdown
+---
+
+## Related Resources 
+ - [Grunting Icons into SVG Sprites](https://markup.tips/projects/grunting-icons-into-svg-sprites.html#focus)

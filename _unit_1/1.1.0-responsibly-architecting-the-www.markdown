@@ -4,6 +4,7 @@ title:  "Responsibly Architecting the World Wide Web 🌐🤔"
 date:   2016-12-18 11:37:34 -0800
 categories: 1.0 accessibility social
 chapter: "1.1.0"
+menuindex: 0
 githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_1/1.1.0-responsibly-architecting-the-www.markdown
 ---
 

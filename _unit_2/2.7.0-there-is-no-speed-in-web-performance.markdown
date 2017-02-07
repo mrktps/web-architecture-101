@@ -4,6 +4,7 @@ title:  "There is no Speed in Web Performance 🚫🚀"
 date:   2016-12-28 10:37:34 -0800
 categories: performance optimization
 chapter: "2.7.0"
+menuindex: 5
 githubedit: https://github.com/mrktps/web-architecture-101/edit/master/_unit_2/2.7.0-there-is-no-speed-in-web-performance.markdown
 ---
 

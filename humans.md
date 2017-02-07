@@ -11,4 +11,3 @@ These are the people that worked on this and stuff.
  - Author 
  - Lead Developer 
  - Lead Designer
- - Markup Tips Founder
