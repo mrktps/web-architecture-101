@@ -8,7 +8,10 @@
     {% include header.html %}
 
     {% if page.layout == 'lesson' %}
-    <nav id="sidenav" class="sidenav" aria-hidden="true" aria-labelledby="toc_">
+    <nav id="sidenav" class="sidenav wrapper" aria-hidden="true" aria-labelledby="toc_">
+      <div aria-hidden="true" class="toggle-toc-wrapper">
+        <a href="{{ "/" | relative_url}}">Table of Contents</a>
+      </div>
       <h2 id="toc_">Table of Contents</h2>
       {% for collection in site.collections | sort: 'title' %}
         {% if collection.title != null %}

@@ -507,6 +507,12 @@ body {
 body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .visually-hidden button {
   display: none !important; }
 
+nav.sidenav > .toggle-toc-wrapper {
+  margin-bottom: 1em; }
+  @media screen and (min-width: 641px) {
+    nav.sidenav > .toggle-toc-wrapper {
+      display: none; } }
+
 .site-title {
   position: relative;
   font-weight: 400;
@@ -542,7 +548,8 @@ aside.subtle {
 
 .grid nav.sidenav {
   display: none;
-  padding: 1em 0; }
+  padding-top: 1em;
+  padding-bottom: 1em; }
   .grid nav.sidenav p {
     margin: 0; }
   .grid nav.sidenav #toc_ {

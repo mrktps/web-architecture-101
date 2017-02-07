@@ -108,6 +108,17 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
   
 }
 
+nav.sidenav {
+  > {
+    .toggle-toc-wrapper {
+      margin-bottom:1em;
+      @include media(min-width 641px) {
+        display:none; 
+      }
+    }
+  }
+}
+
 .site-title {
   position:relative;
   font-weight:400;
@@ -166,7 +177,8 @@ aside.subtle {
     &[aria-hidden="false"] {
       display:block;
     }
-    padding:1em 0;
+    padding-top:1em;
+    padding-bottom:1em;
     summary {
       padding:0 .5rem;
     }
@@ -183,6 +195,9 @@ aside.subtle {
       grid-template-columns: 25vw 75vw;
       grid-template-areas: "header header" "sidebar content"; // "footer footer"
       grid-template-rows: auto calc(100vh - 116px);
+      
+      
+      
       main.wrapper {
         margin-left:0;
       }
