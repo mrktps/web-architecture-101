@@ -509,6 +509,17 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 
 nav.sidenav > .toggle-toc-wrapper {
   margin-bottom: 1em; }
+  @media screen and (max-width: 640px) {
+    nav.sidenav > .toggle-toc-wrapper {
+      position: sticky;
+      top: 0;
+      background: var(--background-color);
+      min-height: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      nav.sidenav > .toggle-toc-wrapper button {
+        margin-top: 0 !important; } }
   @media screen and (min-width: 641px) {
     nav.sidenav > .toggle-toc-wrapper {
       display: none; } }

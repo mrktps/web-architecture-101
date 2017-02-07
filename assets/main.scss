@@ -112,6 +112,19 @@ nav.sidenav {
   > {
     .toggle-toc-wrapper {
       margin-bottom:1em;
+      @include media(max-width 640px) {
+        //position: -webkit-sticky;
+        position:sticky;
+        top:0;
+        background:var(--background-color);
+        min-height:2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+          margin-top:0 !important;
+        }
+      }
       @include media(min-width 641px) {
         display:none; 
       }
