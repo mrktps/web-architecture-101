@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function(e) {
-  
+
   const link = document.createElement('link');
       link.setAttribute('href', 'https://fonts.googleapis.com/css?family=Fira+Mono:400,700|Fira+Sans:300,300i,400,400i,500,500i,700,700i');
       link.setAttribute('rel', 'stylesheet');
@@ -61,4 +61,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
       toggleTocs[i].innerHTML = document.body.classList.contains('toc-shown') ? toggleTocs[i].dataset.tocHide : toggleTocs[i].dataset.tocShow;
     }
   }
+  
+  // when the sticky close button is clicked, on mobile, scroll it into view
+  document.getElementById('toggle-toc0').addEventListener('click', function(e) {
+    if(window.outerWidth > 640) return; // ignore if not mobile
+    setTimeout(function(){ // tiny delay for the DOM to re-render
+      window.scrollTo({ // smoothly scroll to the top of the #fold (pagetitle, content)
+        'behavior': 'smooth', // not safe at all to use today http://caniuse.com/#feat=css-scroll-behavior
+        'left': 0,
+        'top': document.getElementById('fold').offsetTop
+      });
+    },160);
+  });
+  
 });
