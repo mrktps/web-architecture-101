@@ -511,6 +511,7 @@ nav.sidenav > .toggle-toc-wrapper {
   margin-bottom: 1em; }
   @media screen and (max-width: 640px) {
     nav.sidenav > .toggle-toc-wrapper {
+      position: -webkit-sticky;
       position: sticky;
       top: 0;
       background: var(--background-color);
